@@ -11,7 +11,6 @@ const replace = require('gulp-replace'); //余計なテキストを削除
 
 // Sass
 const sass = require('gulp-dart-sass');
-// const sass = require('sass');
 const notify = require('gulp-notify');
 const plumber = require('gulp-plumber');
 const postCss = require('gulp-postcss');
@@ -65,7 +64,7 @@ const paths = {
 
 // ejsコンパイル
 const htmlFunc = () => {
-  const data = JSON.parse(fs.readFileSync('./data.json'));
+  const data = JSON.parse(fs.readFileSync('./src/ejs/data.json'));
   return src(paths.html.src)
     .pipe(
       plumber({
@@ -253,3 +252,4 @@ exports.default = series(
 );
 
 // ファイル削除
+exports.clean = series(cleanFiles);

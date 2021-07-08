@@ -4,6 +4,7 @@
 	position: relative;
 	border-top: vw(2) solid $borderGray;
 	padding: vw(35) 0 vw(25);
+// @include p-vw(padding,100);
 
 	@include mq(lg) {
 		border-width: 1px;

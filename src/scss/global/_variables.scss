@@ -1,3 +1,4 @@
+@use "sass:math";
 // color
 $white:#ffffff;
 $black:#000;
@@ -29,23 +30,33 @@ $breakpoints: ( // 'xs': (min-width: 0),
 	'xl': (min-width: 1367px),
 	'xxl': (min-width: 1980px)) !default;
 
+	//pxをvwに変換するfunction
+@function vw($size, $viewport: 768) {
+	$rate: math.div(100,$viewport);
+	@return math$rate * $size * 1vw;
+}
+@function vw_lg($size, $viewport: 1366) {
+	$rate: math.div(100,$viewport);
+	@return math$rate * $size * 1vw;
+}
+
 //デザインカンプサイズ
-@function vw($size) {
-	// @return $size / 768 * 100vw;
-	@return $size / 768 * 100vw;
-}
+// @function vw($size) {
+// 	@return $size / 768 * 100vw;
+// }
 
-@function vw_lg($size) {
-	@return $size / 1366 * 100vw;
-}
+// @function vw_lg($size) {
+// 	@return $size / 1366 * 100vw;
+// }
 
-@function vh($size) {
-	@return $size / 1440 * 100vh;
-}
+// @function vh($size) {
+// 	@return $size / 1440 * 100vh;
+// }
 
-@function vh_lg($size) {
-	@return $size / 900 * 100vh;
-}
+// @function vh_lg($size) {
+// 	@return $size / 900 * 100vh;
+// }
+
 
 
 // 画像パス

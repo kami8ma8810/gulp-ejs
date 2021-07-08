@@ -1,4 +1,5 @@
 @use 'variables'as *;
+@use "sass:math";
 
 // ○行以上…
 @mixin clamp {
@@ -45,26 +46,19 @@
 	}
 }
 
-//pxをvwに変換するfunction
-@function _get_vw($size, $viewport: 768) {
-	$rate: 100 / $viewport;
-	@return $rate * $size * 1vw;
-}
 
-//フォント用のmixin
-@mixin font-vw($font_size: 10, $viewsize: 768) {
-	font-size: _get_vw($font_size, $viewsize);
-}
 
-//画像用のmixin
-@mixin width-vw($img_size, $viewsize: 768) {
-	width: _get_vw($img_size, $viewsize);
-}
+// @mixin font-vw($font_size: 10, $viewsize: 768) {
+// 	font-size: _get_vw($font_size, $viewsize);
+// }
 
-//paddingやmargin用のmixin（widthやheightでも使える）
-@mixin p-vw($property, $size, $viewsize: 768) {
-	#{$property}: _get_vw($size, $viewsize);
-}
+// @mixin width-vw($img_size, $viewsize: 768) {
+// 	width: _get_vw($img_size, $viewsize);
+// }
+
+// @mixin p-vw($property, $size, $viewsize: 768) {
+// 	#{$property}: _get_vw($size, $viewsize);
+// }
 
 // div {
 // 	@include p-vw(padding, 20);

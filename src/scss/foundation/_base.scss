@@ -122,6 +122,7 @@ img {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	pointer-events: none;
 
 	&.is-loaded {
 		animation: fadeOut .3s $easeInCirc forwards;
@@ -136,8 +137,8 @@ img {
 	opacity: 0;
 	animation: fadeInUp 1s ease-in forwards;
 	animation-delay: .2s;
+	pointer-events: none;
 }
-
 /* ローディングアニメーション */
 @keyframes fadeInUp {
 	0% {
