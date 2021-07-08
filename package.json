@@ -42,6 +42,7 @@
 		"Firefox ESR",
 		"android >= 9.0",
 		"iOS >= 13",
+		"> 1%",
 		"not dead"
 	],
 	"dependencies": {
