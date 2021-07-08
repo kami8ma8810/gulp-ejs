@@ -252,17 +252,19 @@ const watchFiles = () => {
   watch(paths.html.watch, series(htmlFunc, browserReloadFunc));
   watch(paths.styles.src, series(sassCompile));
   watch(paths.scripts.src, series(jsBabel, browserReloadFunc));
-  // watch(paths.scripts.src, series(bundleJs, browserReloadFunc));
+  watch(paths.scripts.src, series(bundleJs, browserReloadFunc));
   watch(paths.images.src, series(imagesFunc, browserReloadFunc));
 };
 
 // npx gulp実行処理
 exports.default = series(
-  // parallel(htmlFunc, sassCompile, bundleJs, imagesFunc),
-  parallel(htmlFunc, sassCompile, jsBabel, imagesFunc),
+  parallel(htmlFunc, sassCompile, jsBabel, bundleJs, imagesFunc),
+  // parallel(htmlFunc, sassCompile, jsBabel, imagesFunc),
   // parallel(htmlFunc, sassCompile, jsBabel),
   parallel(watchFiles, browserSyncFunc)
 );
 
 // ファイル削除
 exports.clean = series(cleanFiles);
+
+exports.bundle = series(bundleJs);
