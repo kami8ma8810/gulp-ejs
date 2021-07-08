@@ -12,6 +12,9 @@ body {
 		Meiryo,
 		sans-serif;
 }
+*{
+	-webkit-tap-highlight-color:rgba(0,0,0,0);//タップの強調色解除
+}
 
 a:hover {
 	opacity: 0.8;
