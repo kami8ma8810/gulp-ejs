@@ -1,0 +1,154 @@
+@use '../global'as *;
+
+body.is-mypage {
+	.c-btn__anchor {
+		display: none;
+	}
+}
+
+.card-select-container {
+	margin-top: vw(160);
+
+	@include mq(md) {
+		margin-top: 125px;
+	}
+}
+
+.card-select-items {
+	@media screen and (max-width:320px) {
+		width: vw(620);
+	}
+
+	width: vw(600);
+	// max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: vw(100);
+
+	label {
+		font-size: vw(24);
+
+		@include mq(md) {
+			font-size: 16px;
+		}
+	}
+
+	@include mq(md) {
+		margin-bottom: 80px;
+	}
+
+	@include mq(lg) {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		width: 100%;
+		max-width: 900px;
+	}
+
+}
+
+.card-select-item {
+	@include mq(lg) {
+		width: 420px;
+		max-width: 420px;
+	}
+
+	input {
+		font-size: vw(24);
+
+		@include mq(md) {
+			font-size: 16px;
+		}
+	}
+
+	.card-img {
+		width: 100%;
+		margin-top: vw(30);
+		margin-bottom: vw(60);
+
+		@include mq(md) {
+			margin-top: 20px;
+			margin-bottom: 80px;
+		}
+
+		@include mq(lg) {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.btn-confirm-arrow {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: vw(420);
+	height: vw(100);
+	// line-height: vw(100);
+	line-height: vw(102);
+	font-size: vw(26);
+
+	@include mq(md) {
+		font-size: 18px;
+		width: 300px;
+		height: 60px;
+		// line-height: 60px;
+		line-height: 62px;
+	}
+}
+
+
+// 確認画面
+.card-confirm-container {
+	@media screen and (max-width:320px) {
+		width: vw(620);
+	}
+
+	width: vw(600);
+	margin-top: vw(145);
+	// max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: vw(100);
+
+	@include mq(md) {
+		margin-top: 115px;
+		margin-bottom: 80px;
+	}
+
+	@include mq(lg) {
+		width: 100%;
+	}
+
+	.confirm-card-img {
+		margin-bottom: vw(50);
+		margin-left: auto;
+		margin-right: auto;
+
+		@include mq(md) {
+			margin-bottom: 40px;
+		}
+
+		@include mq(lg) {
+			width: 420px;
+		}
+	}
+
+	.confirm-desc {
+		text-align: center;
+		margin-bottom: vw(80);
+
+		@include mq(md) {
+			margin-bottom: 60px;
+		}
+	}
+
+	.btn-confirm-arrow {
+		&+.btn-confirm-arrow {
+			margin-top: vw(40);
+
+			@include mq(md) {
+				margin-top: 30px;
+			}
+		}
+	}
+}

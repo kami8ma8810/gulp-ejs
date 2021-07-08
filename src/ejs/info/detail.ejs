@@ -1,0 +1,66 @@
+<% const page='info'; %>
+<%- include('../components/_header',{ meta: data.pageMeta[page]}); %>
+
+<main class="l-main l-page-main c-page-bg">
+	<div class="l-page-outer">
+		<h1 class="l-page-title">INFORMATION</h1>
+		<div class="l-page-inner l-detail-inner page-detail-info">
+
+			<article class="detail-article">
+				<section class="detail-heading">
+					<h2 class="detail-title">
+						ニュースタイトルが入ります。ここはINFORMATION詳細ページです。 ニュースタイトルが入ります。ここはINFORMATION詳細ページです。
+					</h2>
+					<div class="c-info-tags detail-cat-date">
+						<!-- カテゴリーごとにクラスで下線の色を変えてください -->
+						<span class="category __blue">FANCLUB</span><span class="date">2021.00.00</span>
+					</div>
+				</section>
+				<!-- 投稿内容 -->
+				<div class="detail-content">
+					<p>ダミーです。文章がここに入ります。<br>
+						ダミーです。文章がここに入ります。入ります。ダミーです。文章がここに入ります。<br>
+						ダミーです。文章がここに入ります。入ります。<br>
+						ダミーです。文章がここに入ります。<br>
+						ダミーです。文章がここに入ります。入ります。</p>
+					<div><img src="../assets/img/img-miyu02.jpg" alt=""></div>
+					<p>ダミーです。文章がここに入ります。<br>
+						ダミーです。文章がここに入ります。入ります。ダミーです。文章がここに入ります。<br>
+						ダミーです。文章がここに入ります。入ります。<br>
+						ダミーです。文章がここに入ります。<br>
+						ダミーです。文章がここに入ります。入ります。</p>
+					<div class="is-sp"><img src="../assets/img/img-miyu03.jpg" alt=""></div>
+					<div class="is-sp"><img src="../assets/img/img-miyu04.jpg" alt=""></div>
+					<div class="is-pc dummy-img"><img src="../assets/img/img-miyu03.jpg" alt=""><img
+							src="../assets/img/img-miyu04.jpg" alt="">
+					</div>
+					<p>ダミーです。文章がここに入ります。<br>
+						ダミーです。文章がここに入ります。入ります。ダミーです。文章がここに入ります。<br>
+						ダミーです。文章がここに入ります。入ります。<br>
+						ダミーです。文章がここに入ります。<br>
+						ダミーです。文章がここに入ります。入ります。</p>
+				</div>
+				<!-- // 投稿内容 -->
+			</article>
+
+		</div>
+		<!-- information専用ページャー -->
+		<div class="page-info-pager detail-pager">
+			<div class="info-pager-inner">
+				<span class="prev"><a href="#"><img src="../assets/img/ic-info-prev.svg" alt="" width="16"
+							height="auto"></a></span>
+				<span class="text"><a href="#">PREV</a></span>
+				<span class="text"><a href="#">NEXT</a></span>
+				<span class="next"><a href="#"><img src="../assets/img/ic-info-next.svg" alt="" width="16"
+							height="auto"></a></span>
+			</div>
+		</div>
+		<!-- //information専用ページャー -->
+
+		<div class="c-btn__container">
+			<a href="./index.html" class="c-btn__confirm btn-confirm-arrow">INFORMATION TOP</a>
+		</div>
+
+	</div>
+</main>
+<%- include('../components/_footer',{ meta: data.pageMeta[page]}); %>

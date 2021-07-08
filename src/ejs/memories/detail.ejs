@@ -1,0 +1,174 @@
+<% const page='memories'; %>
+<%- include('../components/_header',{ meta: data.pageMeta[page]}); %>
+
+<main class="l-main l-page-main c-page-bg">
+	<div class="l-page-outer">
+		<h1 class="l-page-title">MEMORIES</h1>
+		<div class="l-page-inner l-detail-inner">
+
+			<article class="detail-article">
+				<section class="detail-heading">
+					<h2 class="detail-title">
+						タイトルが入ります。ここはMEMORIES詳細ページです。 タイトルが入ります。ここはMEMORIES詳細ページです。
+					</h2>
+					<p class="detail-date">2021. 00. 00</p>
+				</section>
+				<!-- 投稿内容 テキスト＋画像の記事の場合（style属性は全てテスト用です） -->
+				<div class="detail-content">
+					<h3 style="font-size: 120%;">ここはテキスト＋画像の投稿記事です。</h3>
+					<p>画像はモーダル表示されません。</p>
+					<div>
+						<img src="../assets/img/img-miyu02.jpg" alt="">
+					</div>
+					<p>画像はモーダル表示されません。</p>
+					<div style="width:50%;margin-left: auto;margin-right: auto;">
+						<img src="../assets/img/img-miyu03.jpg" alt="" width="auto" height="300">
+					</div>
+					<p>画像はモーダル表示されません。</p>
+					<h3 style="font-size: 120%;">ここまでがテキスト＋画像の投稿記事です。</h3>
+				</div>
+				<!-- // 投稿内容 テキスト＋画像の記事の場合 -->
+
+				<!-- 投稿内容 画像ギャラリーを使う場合（記事内にテキスト無し）（style属性は全てテスト用です） -->
+				<div class="detail-content">
+					<hr>
+					<h3 style="font-size: 120%;">ここからギャラリー表示の投稿記事です（このテキストは本来表示されません）</h3>
+					<!-- ギャラリー要素 -->
+					<div class="gallery-container">
+						<a href="../assets/img/img-miyu01.jpg">
+							<img src="../assets/img/img-miyu01.jpg" />
+						</a>
+						<a href="../assets/img/img-miyu02.jpg">
+							<img src="../assets/img/img-miyu02.jpg" />
+						</a>
+						<a href="../assets/img/img-miyu03.jpg">
+							<img src="../assets/img/img-miyu03.jpg" />
+						</a>
+						<a href="../assets/img/img-miyu04.jpg">
+							<img src="../assets/img/img-miyu04.jpg" />
+						</a>
+						<a href="../assets/img/img-miyu05.jpg">
+							<img src="../assets/img/img-miyu05.jpg" />
+						</a>
+						<a href="../assets/img/img-miyu01.jpg">
+							<img src="../assets/img/img-miyu01.jpg" />
+						</a>
+						<a href="../assets/img/img-miyu02.jpg">
+							<img src="../assets/img/img-miyu02.jpg" />
+						</a>
+						<a href="../assets/img/img-miyu03.jpg">
+							<img src="../assets/img/img-miyu03.jpg" />
+						</a>
+						<a href="../assets/img/img-miyu04.jpg">
+							<img src="../assets/img/img-miyu04.jpg" />
+						</a>
+						<a href="../assets/img/img-miyu05.jpg">
+							<img src="../assets/img/img-miyu05.jpg" />
+						</a>
+					</div>
+					<!-- // ギャラリー要素 -->
+				</div>
+				<!-- // 投稿内容 画像ギャラリーを使う場合（記事内にテキスト無し） -->
+
+				<div class="detail-btn-container">
+					<!-- ボタンを押したときのスタイルをis-activeで定義 -->
+					<div class="detail-btn__like">
+						<div class="c-btn__like is-active">
+							<span>251</span>
+						</div>
+					</div>
+					<div class="detail-btn__comment">
+						<a href="../comment/index.html" class="c-btn__comment-action"><span>コメントする</span></a></div>
+					<div class="detail-btn__comment-number">
+						<span class="c-btn__comment __black"><span>250</span></span>
+					</div>
+				</div>
+			</article>
+
+			<div class="detail-comment-area">
+				<ul class="comment-items">
+					<!-- 各コメント -->
+					<li class="comment-item">
+						<div class="comment-item__heading">
+							<p class="author">ニックネームが入ります。</p>
+							<p class="date">2021 . 00 . 00</p>
+						</div>
+						<p class="sentence">
+							ダミーです。文章がここに入ります。<br>
+							ダミーです。文章がここに入ります。入ります。ダミーです。文章がここに入ります。
+						</p>
+						<!-- ボタンを押したときのスタイルをis-activeで定義 -->
+						<div class="comment-item__like">
+							<div class="c-btn__like">
+								<span>251</span>
+							</div>
+						</div>
+					</li>
+					<!-- // 各コメント -->
+
+					<!-- 各コメント -->
+					<li class="comment-item">
+						<div class="comment-item__heading">
+							<p class="author">ニックネームが入ります。</p>
+							<p class="date">2021 . 00 . 00</p>
+						</div>
+						<p class="sentence">
+							ダミーです。文章がここに入ります。<br>
+							ダミーです。文章がここに入ります。入ります。ダミーです。文章がここに入ります。
+						</p>
+						<div class="comment-item__like">
+							<!-- ボタンを押したときのスタイルをis-activeで定義 -->
+							<div class="c-btn__like is-active">
+								<span>251</span>
+							</div>
+						</div>
+					</li>
+					<!-- // 各コメント -->
+
+					<!-- 各コメント -->
+					<li class="comment-item">
+						<div class="comment-item__heading">
+							<p class="author">ニックネームが入ります。</p>
+							<p class="date">2021 . 00 . 00</p>
+						</div>
+						<p class="sentence">
+							ダミーです。文章がここに入ります。<br>
+							ダミーです。文章がここに入ります。入ります。ダミーです。文章がここに入ります。
+						</p>
+						<div class="comment-item__like">
+							<!-- ボタンを押したときのスタイルをis-activeで定義 -->
+							<div class="c-btn__like">
+								<span>3001</span>
+							</div>
+						</div>
+					</li>
+					<!-- // 各コメント -->
+				</ul>
+			</div>
+
+		</div>
+		<!-- 共通ページャー -->
+		<div class="l-pager detail-pager">
+			<ul class="pager-items">
+				<li class="pager-item prev"><a href="#"><img src="../assets/img/ic-pager-prev.svg" width="23" height="auto"
+							alt="前の一覧へ"></a></li>
+				<li class="pager-item number"><a href="#">1</a></li>
+				<li class="pager-item number is-current"><span>2</span></li>
+				<li class="pager-item number"><a href="#">3</a></li>
+				<li class="pager-item number"><a href="#">4</a></li>
+				<li class="pager-item number"><a href="#">5</a></li>
+				<li class="pager-item number dotted"><span>…</span></li>
+				<li class="pager-item number"><a href="#">10</a></li>
+				<li class="pager-item next"><a href="#"><img src="../assets/img/ic-pager-next.svg" width="23" height="auto"
+							alt="次の一覧へ"></a></li>
+			</ul>
+		</div>
+		<!-- //共通ページャー -->
+
+		<div class="c-btn__container">
+			<a href="./index.html" class="c-btn__confirm btn-confirm-arrow">MEMORIES TOP</a>
+		</div>
+
+	</div>
+</main>
+<%- include('../components/_footer',{ meta: data.pageMeta[page]}); %>

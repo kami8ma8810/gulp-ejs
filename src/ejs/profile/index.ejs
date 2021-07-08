@@ -1,0 +1,49 @@
+<% const page='profile'; %>
+<%- include('../components/_header',{ meta: data.pageMeta[page]}); %>
+
+<main class="l-main l-page-main c-page-bg">
+	<div class="l-page-outer">
+		<h1 class="l-page-title">PROFILE</h1>
+		<div class="prof-row">
+			<div class="prof-img">
+				<img src="../assets/img/img-profile.jpg" alt="富田美憂の写真" width="670" height="837.5">
+			</div>
+			<div class="prof-heading">
+				<dl>
+					<div class="name">
+						<dt>富田 美憂</dt>
+						<dd>Tomita Miyu</dd>
+					</div>
+					<dd class="occupation">声優 / ミュージシャン</dd>
+				</dl>
+				<ul class="items">
+					<li class="item">性別：女性</li>
+					<li class="item">生年月日：1999年11月15日</li>
+					<li class="item">年齢：21歳</li>
+					<li class="item">出身地：埼玉県</li>
+					<li class="item">身長：153cm</li>
+					<li class="item">血液型：A</li>
+					<li class="item">特技：イラストを描くこと・空手(黒帯)・歌</li>
+				</ul>
+			</div>
+		</div>
+		<div class="prof-desc">
+			<p class="award">「2014声優アーティスト育成プログラム・セレクション」<br class="is-sp">グランプリ受賞</p>
+			<dl class="appearance">
+				<dt>主な出演作品</dt>
+				<dd>
+					▼アニメ<br>「アイカツスターズ！」（主演／虹野ゆめ）、「おしえて！ギャル子ちゃん」（オタ子）、「ひなこのーと」（夏川くいな）、「ガヴリールドロップアウト」（主演／ガヴリール）、「メイドインアビス」（主演／リコ）、「京都寺町三条のホームズ」（主演／真城葵）、「となりの吸血鬼さん」（出演／ソフィー）、「荒野のコトブキ飛行隊」（チカ）、「ぼくたちは勉強ができない」（緒方理珠）、「女子高生の無駄づかい」（山本美波・ヤマイ）、「Z/X
+					Code
+					reunion」（月形由仁）、「放課後さいころ倶楽部」（大野翠）、「ドロヘドロ」（恵比寿）、「はてな☆イリュージョン」（星里夢未）、「異種族レビュアーズ」（クリムヴェール）、「とある科学の超電磁砲T」（警策看取）、「球詠」（川口息吹）、「かぐや様は告らせたい？～天才たちの恋愛頭脳戦～」（伊井野ミコ）
+				</dd>
+			</dl>
+			<p class="career">
+				20歳を迎えた2019年11月に、1stシングル「Present Moment」（アニメ「放課後さいころ倶楽部」オープニング主題歌）でソロアーティストデビューを果たす。
+			</p>
+		</div>
+		<div class="c-btn__container">
+			<a href="../index.html" class="c-btn__confirm btn-confirm-arrow">TOP</a>
+		</div>
+	</div>
+</main>
+<%- include('../components/_footer',{ meta: data.pageMeta[page]}); %>

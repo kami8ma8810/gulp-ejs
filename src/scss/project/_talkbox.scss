@@ -1,0 +1,133 @@
+@use '../global'as *;
+
+.page-talkbox-inner {
+	margin-top: vw(205);
+	margin-bottom: vw(50);
+
+	@include mq(lg) {
+		margin-top: 195px;
+		margin-bottom: 95px;
+	}
+}
+
+.c-article-item.talkbox-item {
+	border-top: vw(2) solid $black;
+	margin-bottom: 0;
+	padding-bottom: vw(60);
+
+	span.new {
+		right: 0;
+		top: vw(24);
+
+		@include mq(lg) {
+			top: 20px;
+			right: 28px;
+		}
+	}
+
+	&:last-of-type {
+		border-bottom: vw(2) solid $black;
+
+		@include mq(lg) {
+			border-width: 2px;
+		}
+	}
+
+	@include mq(lg) {
+		border-width: 2px;
+		width: 100%;
+		max-width: 820px;
+		padding-bottom: 38px;
+		padding-left: 29px;
+		padding-right: 28px;
+	}
+
+	.talk-title.article-title {
+		@include mq(lg) {
+			// font-size: 22px;
+			font-size: 20px;
+			line-height: 1.8;
+		}
+	}
+
+	.article-more {
+		bottom: vw(60);
+
+		@include mq(lg) {
+			right: 26px;
+			bottom: 42px;
+			font-size: 14px;
+		}
+	}
+
+	.article-heading {
+		@include mq(lg) {
+			padding-bottom: 40px;
+		}
+	}
+}
+
+.talkbox-heading {
+	margin-top: vw(20);
+
+	@include mq(lg) {
+		margin-top: 18px;
+	}
+
+	.c-date-talk {
+		margin-bottom: vw(28);
+
+		@include mq(lg) {
+			margin-bottom: 35px;
+		}
+	}
+
+	.c-date-smlg {
+		padding-left: vw(52);
+
+		@include mq(lg) {
+			padding-left: 32px;
+		}
+	}
+}
+
+.talkbox-btn-container {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+
+	.c-btn__like,
+	.c-btn__comment {
+		flex-shrink: 0;
+		height: vw(40);
+		line-height: vw(40);
+		padding-left: vw(24);
+		padding-right: vw(24);
+		border-radius: vw(40);
+
+		@include mq(lg) {
+			height: 30px;
+			line-height: 30px;
+			padding-left: 20px;
+			padding-right: 20px;
+			border-radius: 30px;
+		}
+
+		span {
+			font-size: vw(22);
+			margin-top: .3em;
+
+			@include mq(lg) {
+				font-size: 16px;
+			}
+		}
+	}
+
+	.c-btn__comment {
+		margin-left: vw(10);
+
+		@include mq(lg) {
+			margin-left: 10px;
+		}
+	}
+}

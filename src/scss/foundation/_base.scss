@@ -1,0 +1,162 @@
+@use '../global'as *;
+
+
+body {
+	background-color: $white;
+	color: $black;
+	font-size: 24px;
+	font-family: $yugothic, "Helvetica Neue",
+		"Segoe UI",
+		"Hiragino Kaku Gothic ProN",
+		"Hiragino Sans",
+		Meiryo,
+		sans-serif;
+}
+
+a:hover {
+	opacity: 0.8;
+	transition: opacity .2s $easeOutCirc;
+}
+
+// PC/SP画像保存禁止
+img {
+	// pointer-events: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-touch-callout: none;
+	-moz-user-select: none;
+	touch-callout: none;
+	user-select: none;
+}
+
+// スクリーンリーダー非表示
+.sr-only {
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	margin: -1px;
+}
+
+// pc
+.is-pc {
+	display: none;
+
+	@include mq(md) {
+		display: block
+	}
+}
+
+.is-sp {
+	display: block;
+
+	@include mq(md) {
+		display: none;
+	}
+}
+
+.f-gothic {
+	font-family: $yugothic;
+}
+
+.f-gothicB {
+	font-family: "游ゴシック Medium",
+		"Yu Gothic Medium",
+	;
+}
+
+.f-jfR {
+	// font-family: $josefinR;
+	font-family: 'Josefin Sans',
+		sans-serif;
+	;
+	font-weight: 400;
+}
+
+.f-jfM {
+	// font-family: $josefinM;
+	font-family: 'Josefin Sans',
+		sans-serif;
+	;
+	font-weight: 500;
+}
+
+.f-jfMI {
+	// font-family: $josefinMI;
+	font-family: 'Josefin Sans',
+		sans-serif;
+	;
+	font-weight: 500;
+	font-style: italic;
+}
+
+.f-jfSB {
+	font-family: 'Josefin Sans',
+		sans-serif;
+	;
+	font-weight: 600;
+}
+
+.f-jfB {
+	// font-family: $josefinB;
+	font-family: 'Josefin Sans',
+		sans-serif;
+	;
+	font-weight: 700;
+}
+
+.loading {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: $white;
+	z-index: 9999;
+	overflow-y: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&.is-loaded {
+		animation: fadeOut .3s $easeInCirc forwards;
+		animation-delay: 2s;
+	}
+}
+
+.loading-img {
+	display: block;
+	width: 50%;
+	height: auto;
+	opacity: 0;
+	animation: fadeInUp 1s ease-in forwards;
+	animation-delay: .2s;
+}
+
+/* ローディングアニメーション */
+@keyframes fadeInUp {
+	0% {
+		transform: scale(1.15);
+		opacity: 0;
+	}
+
+	100% {
+		transform: scale(1.0);
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}

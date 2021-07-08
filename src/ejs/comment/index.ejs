@@ -1,0 +1,33 @@
+<% const page='comment'; %>
+<%- include('../components/_header',{ meta: data.pageMeta[page]}); %>
+
+<main class="l-main l-page-main c-page-bg">
+	<div class="l-page-outer">
+		<h1 class="l-page-title">COMMENT</h1>
+		<div class="page-comment-inner comment-form-area">
+			<form id="" action="">
+				<dl>
+					<div class="number">
+						<dt><label>会員番号</label></dt>
+						<dd><label>1234567</label></dd>
+					</div>
+					<div class="name">
+						<dt><label>ニックネーム</label></dt>
+						<dd><label>ニックネームが入ります</label></dd>
+					</div>
+					<div class="content">
+						<dt><label>コメント</label></dt>
+						<dd>
+							<textarea name="" cols="" rows="" placeholder="コメントを書く"></textarea>
+						</dd>
+					</div>
+				</dl>
+			</form>
+			<p class="form-warning">※注意書きが入ります。注意書きが入ります。注意書きが入ります。</p>
+		</div>
+		<div class="c-btn__container">
+			<a href="./confirm.html" class="c-btn__confirm btn-confirm-arrow">確認する</a>
+		</div>
+	</div>
+</main>
+<%- include('../components/_footer',{ meta: data.pageMeta[page]}); %>

@@ -1,0 +1,144 @@
+@use 'variables'as *;
+
+// ○行以上…
+@mixin clamp {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+}
+
+//-----------------------------
+// メディアクエリ
+//-----------------------------
+@mixin mq($breakpoint) {
+	@if map-has-key($breakpoints, $breakpoint) {
+		@media screen and #{inspect(map-get($breakpoints, $breakpoint))} {
+			@content;
+		}
+	}
+
+	@else {
+		@error "指定されたブレークポイントは定義されていません。"+"指定できるブレークポイントは次のとおりです。 -> #{map-keys($breakpoints)}";
+	}
+}
+
+//-----------------------------
+// アニメーション
+//-----------------------------
+
+@mixin animation($name,
+	$duration: 1s,
+	$timing-function: ease,
+	$delay: 0s,
+	$iteration-count: 1,
+	$direction: normal,
+	$fill-mode: forwards) {
+	animation: {
+		name: $name;
+		duration: $duration;
+		timing-function: $timing-function;
+		delay: $delay;
+		iteration-count: $iteration-count;
+		direction: $direction;
+		fill-mode: $fill-mode;
+	}
+}
+
+//pxをvwに変換するfunction
+@function _get_vw($size, $viewport: 768) {
+	$rate: 100 / $viewport;
+	@return $rate * $size * 1vw;
+}
+
+//フォント用のmixin
+@mixin font-vw($font_size: 10, $viewsize: 768) {
+	font-size: _get_vw($font_size, $viewsize);
+}
+
+//画像用のmixin
+@mixin width-vw($img_size, $viewsize: 768) {
+	width: _get_vw($img_size, $viewsize);
+}
+
+//paddingやmargin用のmixin（widthやheightでも使える）
+@mixin p-vw($property, $size, $viewsize: 768) {
+	#{$property}: _get_vw($size, $viewsize);
+}
+
+// div {
+// 	@include p-vw(padding, 20);
+// 	@include p-vw(margin, 10);
+// }
+
+// usage
+
+// //ブラウザサイズ1360px以上はフォントサイズを20px
+// p {
+// 	font-size: 20px;
+// }
+
+// //ブラウザサイズ769px〜1359pxの間であれば、1360pxのときにフォントサイズが20pxになるようにvwに変換
+// @media (min-width: 769px) and (max-width: 1359px) {
+// 	p {
+// 		@include font-vw(20, 1360);
+// 	}
+// }
+
+// //ブラウザサイズ768px以下であれば、375pxのときにフォントサイズが15pxになるようにvwに変換
+// @media (max-width: 768px) {
+// 	p {
+// 		@include font-vw(15, 375); // @include font-vw(15);でもOK
+// 	}
+// }
+
+//-----------------------------
+// ビューポート可変フォントサイズ
+//-----------------------------
+@function strip-unit($value) {
+	@return $value / ($value * 0 + 1);
+}
+
+@mixin vs($property,
+	$min-vp,
+	$min-length,
+	$max-vp,
+	$max-length,
+	$vp-unit: "vw"
+
+) {
+	$u1: unit($min-vp);
+	$u2: unit($min-length);
+	$u3: unit($max-vp);
+	$u4: unit($max-length);
+	$a: strip-unit($min-vp);
+	$b: strip-unit($min-length);
+	$c: strip-unit($max-vp);
+	$d: strip-unit($max-length);
+
+	@if $u1==$u3 and $u2==$u4 {
+		$x: ($d - $b) / ($c - $a) * 100+#{$vp-unit};
+		$y: ($c * $b - $a * $d) / ($c - $a) * 1+#{$u2};
+
+		#{$property}: $min-length;
+
+		@media screen and (min-width: $min-vp) {
+			@if $y==0 {
+				#{$property}: $x;
+			}
+
+			@else {
+				#{$property}: calc(#{$x} + #{$y});
+			}
+		}
+
+		@media screen and (min-width: $max-vp) {
+			#{$property}: $max-length;
+		}
+	}
+}
+
+// Usage
+// .sample {
+// 	@include vs(margin-top, 767px, 5%, 1024px, 10%);
+// }

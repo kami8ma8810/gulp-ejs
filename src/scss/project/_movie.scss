@@ -1,0 +1,42 @@
+@use '../global'as *;
+
+.page-movie-inner {
+	margin-top: vw(210);
+
+	@include mq(lg) {
+		margin-top: 195px;
+	}
+}
+
+.c-article-item.movie-article {
+	margin-bottom: vw(60);
+
+	@include mq(lg) {
+		margin-bottom: 90px;
+	}
+
+	.movie-img {
+		border: vw(6.3) solid $black;
+		height: vw(450);
+		border-radius: vw(42.5);
+		background-size: cover;
+
+		@include mq(lg) {
+			height: 205px;
+			border-width: 2.9px;
+			border-radius: 19.7px;
+		}
+	}
+
+	.movie-img-obj {
+		width: vw(360);
+		margin-top: -1px;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+
+		@include mq(lg) {
+			width: 167px;
+		}
+	}
+}

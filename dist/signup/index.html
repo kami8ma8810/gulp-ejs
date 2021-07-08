@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="description" content="富田美憂オフィシャルサイト">
+		<title>富田美憂オフィシャルサイト</title>
+		<!-- ===========メタ情報=========== -->
+		<meta name="keywords" content="富田美憂,とみたみゆ,tomitamiyu,トミタミユ,富田美憂オフィシャルサイト,富田美憂ファンクラブ,＋ you,プラスユー,ぷらすゆー,声優">
+		<meta http-equiv="x-dns-prefetch-control" content="on">
+		<link rel="dns-prefetch" href="//tomitamiyu.com/">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="富田美憂オフィシャルサイト">
+		<meta property="og:description" content="声優／アーティスト「富田美憂(とみたみゆ)」のオフィシャルサイト。オフィシャルファンクラブ「+ you」。">
+		<meta property="og:image" content="組込時に追記">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:image:src" content="組込時に追記">
+		<meta name="twitter:site" content="@miyustaff">
+		<meta name="twitter:creator" content="@miyustaff">
+		<meta name="twitter:title" content="富田美憂オフィシャルサイト">
+		<meta name="twitter:description" content="声優／アーティスト「富田美憂(とみたみゆ)」のオフィシャルサイト。オフィシャルファンクラブ「+ you」。">
+		<meta name="thumbnail" content="組込時に追記">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+		<link rel="shortcut icon" href="組込時に追記" type="image/x-icon">
+		<link rel="apple-touch-icon-precomposed" href="組込時に追記">
+		<!-- ===========// メタ情報=========== -->
+		<!-- ===========assets=========== -->
+		<!-- google fonts -->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+		<!-- google fonts -->
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" media="print" onload="this.media='all'">
+		<link rel="stylesheet" href="../assets/css/bg.css" media="print" onload="this.media='all'">
+		<link rel="stylesheet" href="../assets/css/style.css">
+		<link rel="stylesheet" href="../assets/css/calendar.css">
+		<script src="../assets/js/calendar.js"></script>
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<!-- Google Calendar -->
+		<script>
+			document.addEventListener('DOMContentLoaded', function()
+			{
+				var calendarEl = document.getElementById('calendar');
+				var calendar = new FullCalendar.Calendar(calendarEl,
+				{
+					headerToolbar:
+					{
+						// left: 'prev,next today',
+						// left: 'none',
+						// center: 'title',
+						left: 'title',
+						// right: 'dayGridMonth,listYear'
+						right: 'prev,next'
+					},
+					displayEventTime: false, // don't show the time column in list view
+					// THIS KEY WON'T WORK IN PRODUCTION!!!
+					// To make your own Google API key, follow the directions here:
+					// http://fullcalendar.io/docs/google_calendar/
+					googleCalendarApiKey: 'AIzaSyDcnW6WejpTOCffshGDDb4neIrXVUA1EAE',
+					// US Holidays
+					events: 'tomitamiyu.19991115@gmail.com',
+					eventClick: function(arg)
+					{
+						// opens events in a popup window
+						window.open(arg.event.url, 'google-calendar-event', 'width=700,height=600');
+						arg.jsEvent.preventDefault() // don't navigate in main tab
+					},
+					loading: function(bool)
+					{
+						document.getElementById('loading').style.display = bool ? 'block' : 'none';
+					}
+				});
+				calendar.render();
+			});
+		</script>
+		<!-- Google Calendar -->
+	</head>
+	<body id="js-anchor" class="c-bg-bottom is-sub" ontouchstart="">
+		<header class="header" id="js-headerChange">
+			<div class="header-inner">
+				<h1 class="header-logo">
+					<a href="../index-logout.html">
+						<picture>
+							<source media="(min-width: 992px)" srcset="../assets/img/text-logo-lg.svg">
+							<source media="(min-width: 300px)" srcset="../assets/img/text-logo-sm.svg">
+							<img src="../assets/img/text-logo-sm.svg" alt="">
+						</picture>
+						<span class="sr-only">MIYU TOMIYA OFFICIAL SITE</span>
+					</a>
+				</h1>
+				<div class="header-btn-container">
+					<ul class="header-sns-items">
+						<li class="header-sns-item youtube"><a href="#" target="_blank" rel="noopener noreferrer"><img src="../assets/img/ic-youtube.svg" width="100" height="auto" alt="YouTubeへのリンク"></a></li>
+						<li class="header-sns-item twitter"><a href="#" target="_blank" rel="noopener noreferrer"><img src="../assets/img/ic-twitter.svg" width="100" height="auto" alt="富田美憂のTwitterへのリンク"></a></li>
+						<li class="header-sns-item twitter-staff"><a href="#" target="_blank" rel="noopener noreferrer"><img src="../assets/img/ic-twitter-staff.svg" width="100" height="auto" alt="スタッフのTwitterへのリンク"></a>
+						</li>
+					</ul>
+					<div class="header-btn-items">
+						<div class="c-btn__login header-login-btn js-openModal"> LOGIN </div>
+						<div class="hamburger-btn">
+							<button type="button" id="js-drawerOpen" aria-controls="drawer" aria-expanded="false">
+								<span class="hamburger__line">
+									<span class="sr-only"> メニューを開く </span>
+								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- drawer -->
+		<div id="js-drawer" class="l-drawer js-drawer" aria-expanded="false">
+			<div class="l-drawer__backdrop js-backdrop"></div>
+			<nav class="l-drawer__nav drawer-nav">
+				<div id="js-closeDrawer" class="drawer-close-btn">
+					<button type="button" aria-controls="drawer" aria-expanded="false">
+						<img src="../assets/img/btn-drawer-close.svg" class="Nav-button-image" alt="メニューを閉じる" width="18" height="18">
+					</button>
+				</div>
+				<ul class="drawer-nav-items f-jfR">
+					<li class="drawer-nav-item">
+						<a href="../info/">INFORMATION</a>
+					</li>
+					<li class="drawer-nav-item external-link">
+						<a href="#" target="_blank" rel="noopener noreferrer">DISCOGRAPHY</a>
+					</li>
+					<li class="drawer-nav-item">
+						<a href="../profile/">PROFILE</a>
+					</li>
+					<li class="drawer-nav-item">
+						<a href="../schedule/">SCHEDULE</a>
+					</li>
+					<li class="drawer-nav-item external-link">
+						<a href="#" target="_blank" rel="noopener noreferrer">GOODS</a>
+					</li>
+					<!-- FC AREA -->
+					<ul class="drawer-fc-items">
+						<li class="drawer-nav-item drawer-fc-title f-jfB">FANCLUB&ensp;AREA</li>
+						<li class="drawer-nav-item js-closeItem js-openModal"> MEMORIES </li>
+						<li class="drawer-nav-item js-closeItem js-openModal"> MOVIE </li>
+						<li class="drawer-nav-item js-closeItem js-openModal"> REPORT </li>
+						<li class="drawer-nav-item js-closeItem js-openModal"> PODCAST </li>
+						<li class="drawer-nav-item js-closeItem js-openModal"> TALKBOX </li>
+						<li class="drawer-nav-item js-closeItem js-openModal"> SPECIAL </li>
+					</ul>
+					<!-- // FC AREA -->
+					<ul class="drawer-sns-items">
+						<li class="drawer-sns-item youtube"><a href="#" rel="noopener noreferrer" target="_blank"><img src="../assets/img/ic-youtube.svg" alt="YouTubeへのリンク" width="57" height="auto"></a>
+						</li>
+						<li class="drawer-sns-item twitter"><a href="#" rel="noopener noreferrer" target="_blank"><img src="../assets/img/ic-twitter.svg" alt="富田美憂のTwitterへのリンク" width="47" height="auto"></a>
+						</li>
+						<li class="drawer-sns-item twitter-staff"><a href="#" rel="noopener noreferrer" target="_blank"><img src="../assets/img/ic-twitter-staff.svg" alt="スタッフのTwitterへのリンク" width="57" height="auto"></a>
+						</li>
+					</ul>
+					<ul class="drawer-footer-items f-gothic">
+						<li class="drawer-footer-item"><a href="#">FAQ</a></li>
+						<li class="drawer-footer-item"><a href="#">利用規約</a></li>
+						<li class="drawer-footer-item"><a href="#">プライバシーポリシー</a></li>
+						<li class="drawer-footer-item"><a href="#">特定商取引法</a></li>
+					</ul>
+				</ul>
+			</nav>
+		</div>
+		<!-- //drawer -->
+		<!-- modal area -->
+		<section id="js-modalArea" class="modal-area">
+			<div id="js-modalBg" class="modal-bg"></div>
+			<div class="modal-container">
+				<div class="modal-inner">
+					<div class="login-id">
+						<dt><label>A!-ID（メールアドレス）</label></dt>
+						<dd>
+							<input type="email" autocomplete="email" placeholder="メールアドレス（半角英数字）" autocorrect="off" autocapitalize="off">
+						</dd>
+					</div>
+					<div class="login-pw">
+						<dt><label>パスワード</label></dt>
+						<dd>
+							<input type="password" placeholder="パスワード（半角英数字）" autocorrect="off" autocapitalize="off">
+						</dd>
+					</div>
+					<div class="login-btn">
+						<button type="submit">LOGIN</button>
+					</div>
+					<div class="login-btn __signup">
+						<a href="#">新規ご入会の方はこちら</a>
+					</div>
+					<div class="login-desc">
+						<a href="#" class="u-underline">A!-IDとは</a>
+						<a href="#" class="u-underline">パスワードを忘れた方はこちら</a>
+					</div>
+					<div id="js-closeModal" class="btn-close-modal">
+						<img src="../assets/img/btn-modal-close.svg" alt="モーダルを閉じる">
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- //modal area -->
+		<main class="l-main c-main">
+			<div class="c-border-inner p-signup-container">
+				<h1 class="c-border-inner__title p-signup-page-title"><span class="sr-only">YANAGIDA MASAHIRO SUPPORTERS CLUB</span>
+					<img src="../img/img-page-logo.svg" alt="YANAGIDA MASAHIRO SUPPORTERS CLUB">
+				</h1>
+				<div class="c-content-inner p-signup-inner">
+					<p class="p-signup-desc"> 柳田将洋選手を応援してくださっている方のための月額会員制サイトです。<br> サポーター登録をしていただくと、柳田将洋選手の背番号にちなんだ以下の“8つのサポーター特典”が受けられます！ </p>
+					<section class="p-signup-benefits">
+						<h2 class="p-signup-benefits__title">
+							<img src="../img/text-benefits.svg" alt="8つのサポーター特典">
+						</h2>
+						<div class="p-benefit-flex">
+							<!-- p-benefit-item -->
+							<section class="p-benefit-item">
+								<h3 class="p-benefit-item__title">
+									<span class="p-title-icon __1"></span> オリジナルサポーター番号の発行
+								</h3>
+								<div class="p-benefit-item__content __1">
+									<p class="text">アナタだけのオリジナルサポーター番号(背番号)をご用意します！</p>
+									<div class="img"><img src="../img/ic-uniform02.svg" alt=""></div>
+								</div>
+							</section>
+							<!-- // p-benefit-item -->
+							<!-- p-benefit-item -->
+							<section class="p-benefit-item">
+								<h3 class="p-benefit-item__title">
+									<span class="p-title-icon __2"></span> サイトコンテンツの閲覧
+								</h3>
+								<div class="p-benefit-item__content __2">
+									<p class="text">本人&スタッフのブログ、動画の配信(不定期)などここでしか見られない柳田選手の様々な面をお届けします。<br> また、サポーターの方同士の交流の場である「MASA’s BBS」では、柳田選手が立てたスレッドを閲覧することが出来ます。 </p>
+									<div class="img"><img src="../img/img-benefit02.png" alt=""></div>
+								</div>
+							</section>
+							<!-- // p-benefit-item -->
+						</div>
+						<div class="p-benefit-flex">
+							<!-- p-benefit-item -->
+							<section class="p-benefit-item">
+								<h3 class="p-benefit-item__title __3">
+									<span class="p-title-icon __3"></span> MAIL NEWSの配信（不定期）
+								</h3>
+								<div class="p-benefit-item__content __3">
+									<p class="text">柳田将洋選手の最新情報をメールでお届け！</p>
+									<div class="img"><img src="../img/ic-mailnews.png" alt=""></div>
+								</div>
+							</section>
+							<!-- // p-benefit-item -->
+							<!-- p-benefit-item -->
+							<section class="p-benefit-item">
+								<h3 class="p-benefit-item__title">
+									<span class="p-title-icon __4"></span> グリーティングメール配信
+								</h3>
+								<div class="p-benefit-item__content __4">
+									<p class="text">アナタのお誕生日に柳田将洋選手からBirthdayメールが届く他、年に何度か配信！（不定期）</p>
+									<div class="img"><img src="../img/img-benefit04.png" alt=""></div>
+								</div>
+							</section>
+							<!-- // p-benefit-item -->
+						</div>
+						<div class="p-benefit-flex">
+							<!-- p-benefit-item -->
+							<section class="p-benefit-item">
+								<h3 class="p-benefit-item__title">
+									<span class="p-title-icon __5"></span> グッズの販売
+								</h3>
+								<div class="p-benefit-item__content __5">
+									<div class="img"><img src="../img/img-benefit05.png" alt="サポーターズキットの写真">
+									</div>
+									<div class="img"><img src="../img/text-asmart.png" alt="A!SMART">
+									</div>
+									<p class="text">▲「柳田将洋 SHOP」にて、ご購入いただけます。 </p>
+								</div>
+							</section>
+							<!-- // p-benefit-item -->
+							<!-- p-benefit-item -->
+							<section class="p-benefit-item">
+								<h3 class="p-benefit-item__title">
+									<span class="p-title-icon __6"></span> イベントへの参加（不定期）
+								</h3>
+								<div class="p-benefit-item__content __6">
+									<p class="text">▼2018年8月開催「柳田将洋 1st Fan Meeting」 </p>
+									<div class="img"><img src="../img/img-benefit06.jpg" alt=""></div>
+									<p class="text">※限定イベントは不定期開催です。毎年必ず行うものではございません。<br> また、ご応募多数の場合は抽選となり、必ずしもご参加のお約束が出来るということではございませんので、予めご了承ください。 </p>
+								</div>
+							</section>
+							<!-- // p-benefit-item -->
+						</div>
+						<div class="p-benefit-flex">
+							<!-- p-benefit-item -->
+							<section class="p-benefit-item">
+								<h3 class="p-benefit-item__title">
+									<span class="p-title-icon __7"></span> プレゼント企画（不定期）
+								</h3>
+								<div class="p-benefit-item__content __7">
+									<p class="text">柳田選手からのスペシャルなプレゼントがもらえる抽選にご応募いただけます！</p>
+									<div class="img"><img src="../img/img-benefit07.png" alt=""></div>
+								</div>
+							</section>
+							<!-- // p-benefit-item -->
+							<!-- p-benefit-item -->
+							<section class="p-benefit-item">
+								<h3 class="p-benefit-item__title">
+									<span class="p-title-icon __8"></span> 長期サポーター制度
+								</h3>
+								<div class="p-benefit-item__content __8">
+									<p class="text">サポーター登録を継続してくださった方へのスペシャル特典をご用意！<br> 継続日数に応じた特典が受けられます。 </p>
+									<div class="img"><img src="../img/img-benefit08.png" alt=""></div>
+								</div>
+							</section>
+							<!-- // p-benefit-item -->
+						</div>
+					</section>
+					<!-- // p-signup-benefits -->
+					<section class="p-signup-borderset __price">
+						<h2 class="p-signup-borderset__title">サポーター登録料<span class="title-icon"><img src="../img/ic-cash.svg" alt=""></span></h2>
+						<dl class="price">
+							<dt>月額利用料</dt>
+							<dd>440円（税込）</dd>
+						</dl>
+						<div class="price-howto">
+							<p class="desc">以下のお支払方法をご利用いただけます。</p>
+							<ul class="items">
+								<li class="item">クレジットカード決済</li>
+								<li class="item">キャリア決済(docomo、au、Softbank)</li>
+							</ul>
+						</div>
+					</section>
+					<section class="p-signup-borderset __bbs">
+						<h2 class="p-signup-borderset__title">MASA’s BBS <span class="title-icon"><img src="../img/ic-bbs.svg" alt=""></span>
+						</h2>
+						<p class="text">柳田将洋選手の応援メッセージや試合、イベント、テレビ出演などの内容に関するご感想などを投稿・共有する場所です。<br> サポーターの皆さんの交流の場としてご活用いただくほか、スタッフから皆さんへ意見を募集したり、柳田選手が遊びに来てくれたり!?</p>
+						<div class="c-dotted-inner">
+							<img src="../img/img-bbs-sample.jpg" alt="">
+						</div>
+					</section>
+					<section class="p-signup-borderset __meeting">
+						<h2 class="p-signup-borderset__title"> 2018年8月開催<br class="is-sp"> 「柳田将洋 1st Fan Meeting」 <span class="title-icon"><img src="../img/ic-uniform03.svg" alt=""></span>
+						</h2>
+						<div class="c-dotted-inner">
+							<img src="../img/img-fanmeeting.png" alt="">
+						</div>
+					</section>
+					<div class="p-signup-together">
+						<span class="inner">一緒に柳田将洋選手を応援しましょう！</span>
+					</div>
+					<a href="../signup/" class="c-btn__black p-btn__signup" target="_blank" rel="noopener noreferrer">登録はこちら</a>
+				</div>
+				<!-- c-content-inner p-signup-inner -->
+			</div>
+			<!-- // c-border-inner -->
+			<div class="c-btn__anchor">
+				<a href="#js-anchor">
+					<img class="anchor-img" src="../img/ic-top-anchor.svg" alt="">
+					<span>TOP</span></a>
+			</div>
+			<div class="c-fc-container l-main-container">
+				<div class="c-btn__fc js-fc-link">
+					<a href="#"><img src="../img/img-fixed-fc.png" alt="ファンクラブへのリンク" width="" height=""></a>
+				</div>
+			</div>
+		</main>
+		<footer class="l-footer para-item" data-reg="10">
+			<div class="c-btn__anchor anchor-btn">
+				<a href="#js-anchor">
+					<picture>
+						<source media="(min-width: 992px)" srcset="../assets/img/btn-anchor-pc.svg">
+						<source media="(min-width: 300px)" srcset="../assets/img/btn-anchor.svg">
+						<img src="../assets/img/btn-anchor.svg" alt="" width="50" height="auto">
+					</picture>
+				</a>
+			</div>
+			<p class="l-footer__copyright">&copy; AMUSE Inc. All Rights Reserved.</p>
+		</footer>
+		<script>
+			window.onload = function()
+			{
+				const loadingContent = document.getElementById('js-loading');
+				const Body = document.getElementsByTagName('body');
+				loadingContent.classList.add('is-loaded');
+				Body[0].classList.add('is-loaded');
+			}
+		</script>
+		<script src="../assets/js/script.js"></script>
+		<script src="../assets/js/slider.js"></script>
+		<script src="../assets/js/modal.js"></script>
+		<script src="../assets/js/drawer.js"></script>
+	</body>
+</html>

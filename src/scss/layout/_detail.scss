@@ -1,0 +1,374 @@
+@use '../global'as *;
+
+.l-detail-inner {
+	margin-top: vw(150);
+	margin-bottom: vw(32);
+
+	@include mq(lg) {
+		margin-top: 185px;
+		margin-bottom: 65px;
+	}
+}
+
+.detail-pager {
+	margin-bottom: vw(180);
+
+	@include mq(lg) {
+		margin-bottom: 140px;
+	}
+}
+
+.detail-heading {
+	border-bottom: vw(2) solid $black;
+
+	@include mq(lg) {
+		border-width: 2px;
+	}
+
+	.detail-title {
+		font-size: vw(30);
+		font-weight: bold;
+		line-height: 1.67;
+		margin-bottom: vw(40);
+
+		@include mq(lg) {
+			font-size: 22px;
+			line-height: 1.72;
+			margin-bottom: 35px;
+		}
+	}
+
+	.detail-date {
+		@include josefinR;
+		// font-family: $josefinR;
+		font-size: vw(22);
+		margin-bottom: vw(40);
+
+		@include mq(lg) {
+			font-size: 15px;
+			letter-spacing: .05em;
+			margin-bottom: 45px;
+		}
+	}
+
+	.detail-cat-date {
+		margin-bottom: vw(58);
+
+		@include mq(lg) {
+			margin-bottom: 45px;
+		}
+	}
+}
+
+.detail-content {
+	padding-top: vw(40);
+	margin-bottom: vw(35);
+
+	@include mq(lg) {
+		padding-top: 40px;
+		margin-bottom: 50px;
+	}
+
+	&>* {
+		font-size: vw(22);
+		line-height: 1.9;
+		margin-bottom: vw(35);
+		max-width: 100%;
+		word-break: break-all;
+		// pointer-events: none;
+
+		@include mq(lg) {
+			font-size: 14px;
+			line-height: 2;
+			margin-bottom: 32px;
+		}
+	}
+
+	.is-pc.dummy-img {
+		display: none;
+
+		@include mq(lg) {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		img {
+			width: 45%;
+		}
+	}
+}
+
+.detail-btn-container {
+	border-bottom: vw(2) solid $black;
+	padding-bottom: 2px;
+
+	@include mq(lg) {
+		border-width: 2px;
+	}
+
+	.detail-btn__like {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+
+		.c-btn__like {
+			@include mq(lg) {
+				height: 36px;
+				border-radius: 18px;
+				padding-left: 22px;
+				padding-right: 22px;
+			}
+
+			span {
+				margin-top: .2em;
+
+				@include mq(lg) {
+					font-size: 20px;
+				}
+			}
+		}
+	}
+
+	.detail-btn__comment {
+		text-align: center;
+		margin-top: vw(100);
+		margin-bottom: vw(35);
+
+		@include mq(lg) {
+			margin-top: 60px;
+			margin-bottom: 25px;
+		}
+	}
+
+	.detail-btn__comment-number {
+		text-align: left;
+		margin-bottom: 0;
+		pointer-events: none;
+
+		@include mq(lg) {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.detail-comment-area {
+	border-bottom: vw(2) solid $black;
+
+	@include mq(lg) {
+		border-width: 2px;
+	}
+
+	.comment-item {
+		padding: vw(50) vw(20) vw(40);
+
+		@include mq(lg) {
+			padding: 40px 40px 30px;
+		}
+
+		&+.comment-item {
+			border-top: vw(1) solid $borderGray;
+		}
+
+		.comment-item__heading {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			margin-bottom: vw(30);
+
+			@include mq(lg) {
+				margin-bottom: 18px;
+			}
+
+			.author {
+				font-size: vw(24);
+
+				@include mq(lg) {
+					font-size: 16px;
+				}
+			}
+
+			.date {
+				letter-spacing: .02em;
+				font-size: vw(22);
+				@include josefinR;
+				// font-family: $josefinR;
+
+				@include mq(lg) {
+					font-size: 15px;
+				}
+			}
+		}
+
+		.sentence {
+			font-size: vw(21);
+			margin-bottom: vw(20);
+			line-height: 1.8;
+
+			@include mq(lg) {
+				font-size: 13px;
+				line-height: 2;
+				margin-bottom: 20px;
+			}
+		}
+
+		.comment-item__like {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+
+			.c-btn__like {
+				transform: scale(0.85) translateX(10%);
+
+				@include mq(lg) {
+					transform: scale(1.2) translateX(-5%);
+				}
+
+				span {
+					vertical-align: middle;
+					margin-top: 0.2em;
+				}
+			}
+		}
+	}
+
+}
+
+// ----------------------------------------
+// INFORMATIONのみ下記スタイル追加
+// ----------------------------------------
+.page-detail-info {
+	margin-top: vw(200);
+	margin-bottom: vw(115);
+
+	.detail-heading .detail-title {
+		margin-bottom: vw(35);
+	}
+}
+
+// ----------------------------------------
+// TALKBOXのみ下記スタイル追加
+// ----------------------------------------
+.page-detail-talkbox {
+	margin-top: vw(205);
+
+	@include mq(lg) {
+		margin-top: 190px;
+	}
+
+	.c-date-smlg {
+		padding-left: vw(50);
+
+		@include mq(lg) {
+			padding-left: 30px;
+		}
+	}
+
+	.detail-title {
+		margin-top: vw(30);
+
+		@include mq(lg) {
+			margin-top: 35px;
+		}
+	}
+
+	.detail-heading {
+		border-bottom: none;
+	}
+}
+
+// コンテンツ内画像モーダル
+// .detail-content {
+
+// 	.detail-modal {
+// 		display: none;
+// 		height: 100vh;
+// 		position: fixed;
+// 		top: 0;
+// 		left: 0;
+// 		right: 0;
+// 		bottom: 0;
+// 		width: 100%;
+// 		z-index: z-index(drawer-modal);
+// 	}
+
+// 	.modal__bg {
+// 		position: absolute;
+// 		width: 100%;
+// 		height: 100vh;
+// 		background: rgba(0, 0, 0, 0.5);
+// 		cursor: pointer;
+// 	}
+
+// 	.modal__content {
+// 		position: absolute;
+// 		left: 50%;
+// 		top: 50%;
+// 		height: auto;
+// 		width: 94%;
+// 		transform: translate(-50%, -50%);
+// 		z-index: z-index(drawer-modal-on);
+// 		background: #fff;
+// 		padding: vw(100) vw(30);
+// 		text-align: center;
+// 		max-height: 100vh;
+
+// 		@include mq(lg) {
+// 			width: 90vw;
+// 			// max-height: 90vh;
+// 			padding: 60px;
+// 		}
+
+// 		.modal-img {
+// 			width: 100%;
+// 			height: 100%;
+
+// 			img {
+// 				object-fit: cover;
+// 				width: 100%;
+
+// 				@include mq(lg) {
+// 					object-fit: contain;
+// 					width: auto;
+// 					height: 80vh;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
+/*
+ギャラリー表示用
+ */
+.gallery-container {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	&::after {
+		content: "";
+		display: block;
+		width: calc((100% - 20px) / 3);
+	}
+
+	a {
+		position: relative;
+		width: calc((100% - 20px) / 3); // 3カラムで表示させる
+		margin-top: 10px;
+
+		&:before {
+			content: "";
+			display: block;
+			padding-top: 100%;
+		}
+
+		img {
+			position: absolute; // 浮かせる
+			width: 100%; // 親要素の100%
+			height: 100%; // 親要素の100%
+			top: 0;
+			left: 0;
+			object-fit: cover; // 画像をリサイズしていい感じに覆ってくれる
+		}
+	}
+}

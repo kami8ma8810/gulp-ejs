@@ -1,0 +1,16 @@
+<% const page='schedule'; %>
+<%- include('../components/_header',{ meta: data.pageMeta[page]}); %>
+
+<main class="l-main l-page-main c-page-bg">
+	<div class="l-page-outer">
+		<h1 class="l-page-title">SCHEDULE</h1>
+		<div class="calendar-container">
+			<div id="loading"></div>
+			<div id="calendar"></div>
+		</div>
+		<div class="c-btn__container">
+			<a href="../index.html" class="c-btn__confirm btn-confirm-arrow">TOP</a>
+		</div>
+	</div>
+</main>
+<%- include('../components/_footer',{ meta: data.pageMeta[page]}); %>

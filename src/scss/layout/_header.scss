@@ -1,0 +1,325 @@
+@use '../global'as *;
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 140px;
+	background-color: $white;
+	z-index: z-index(header);
+	transition: height .4s $easeInOutCirc;
+
+	@include mq(lg) {
+		height: 160px;
+	}
+}
+
+.header-inner {
+	position: relative;
+	height: 100%;
+}
+
+.header-logo {
+	position: absolute;
+	top: 23.68px;
+	// left: 20.25px;
+	left: 12.8px;
+	text-align: left;
+
+	@include mq(lg) {
+		transition: top .35s $easeInOutCirc;
+		top: 41.4px;
+		// left: 42.9px;
+		left: 24.9px;
+	}
+
+	source,
+	img {
+		transition: height .35s $easeInOutCirc;
+		display: inline-block;
+		width: auto;
+		height: 80.8px;
+
+		@include mq(lg) {
+			display: inline;
+			width: 194.8px;
+			height: auto;
+		}
+	}
+}
+
+.header-btn-container {
+	position: absolute;
+	top: 25px;
+	right: 18.8px;
+	display: flex;
+
+	@include mq(lg) {
+		top: 50%;
+		transform: translateY(-50%);
+		align-items: center;
+		justify-content: flex-end;
+	}
+}
+
+.header-btn-items {
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: space-between;
+	align-items: center;
+
+	@include mq(lg) {
+		flex-direction: row;
+		justify-content: flex-end;
+		margin-left: 27px;
+	}
+}
+
+.header-sns-items {
+	display: none;
+
+	@include mq(lg) {
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+}
+
+.header-sns-item {
+
+	img {
+		vertical-align: top;
+	}
+
+	&.youtube {
+		width: 28.3px;
+	}
+
+	&.twitter {
+		width: 23.2px;
+		margin-left: 15px;
+	}
+
+	&.twitter-staff {
+		width: 28.7px;
+		margin-left: 12px;
+	}
+}
+
+.hamburger-btn {
+	position: relative;
+	display: inline-block;
+	margin-bottom: 25px;
+	width: 70px;
+	height: 25px;
+
+	@include mq(lg) {
+		margin-left: 30px;
+		margin-bottom: 0;
+		width: 80px;
+		height: 30px;
+	}
+}
+
+.hamburger-btn>button {
+	position: relative;
+	display: inline-block;
+	box-sizing: border-box;
+	vertical-align: middle;
+	text-decoration: none;
+	appearance: none;
+	border: none;
+	cursor: pointer;
+	width: 70px;
+	height: 25px;
+	margin: auto;
+	padding: 0;
+	outline: none;
+	background-color: $white;
+
+	@include mq(lg) {
+		width: 80px;
+		height: 30px;
+	}
+}
+
+.hamburger__line {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	width: 70px;
+	height: 1px;
+	background-color: $black;
+
+	@include mq(lg) {
+		width: 80px;
+		height: 1.4px
+	}
+}
+
+.hamburger__line::before,
+.hamburger__line::after {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: inherit;
+	content: '';
+	transition: inherit;
+}
+
+.hamburger__line::before {
+	top: -12.5px;
+
+	@include mq(lg) {
+		top: -15px;
+	}
+}
+
+.hamburger__line::after {
+	top: 12.5px;
+
+	@include mq(lg) {
+		top: 15px;
+	}
+}
+
+.header-login-btn {
+	position: relative;
+	background-color: $black;
+	width: 70px;
+	height: 39px;
+	line-height: 39px;
+	font-size: 13px;
+	overflow: hidden;
+	opacity: 1;
+	animation: scrollIn .35s $easeInOutCirc;
+
+	&.is-login {
+		background-color: $blue;
+	}
+
+	@include mq(lg) {
+		font-size: 18px;
+		width: 140px;
+		height: 30px;
+		line-height: 33px;
+		animation: none;
+	}
+
+	&::before {
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		content: "";
+		width: 100%;
+		height: 100%;
+		background-color: $white;
+		transform: translateY(-100%);
+		transition: transform .34s $easeInOutCirc;
+		animation: scrollIn .35s $easeInOutCirc;
+	}
+
+	&::after {
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		content: "";
+		width: 100%;
+		height: 100%;
+		background-color: $white;
+		transform: translateY(100%);
+		transition: transform .4s $easeInOutCirc;
+		animation: scrollIn .4s $easeInOutCirc;
+	}
+}
+
+// 上スクロール時
+.header.is-change {
+	height: 92px;
+
+	@include mq(lg) {
+		height: 90px;
+	}
+
+	.header-logo {
+		top: 23.68px;
+
+		source,
+		img {
+			height: 56.8px;
+
+			@include mq(lg) {
+				width: 194.8px;
+				height: auto;
+			}
+		}
+
+		@include mq(lg) {
+			top: 22px;
+		}
+	}
+
+	.header-login-btn {
+		animation: scrollOut .4s $easeInOutCirc;
+		animation-fill-mode: forwards;
+
+		@include mq(lg) {
+			display: block;
+			animation: none;
+		}
+
+		&::before {
+			transform: translateY(0);
+			animation: scrollIn .4s $easeInOutCirc;
+
+			@include mq(lg) {
+				content: none;
+				animation: none;
+			}
+		}
+
+		&::after {
+			transform: translateY(0);
+			animation: scrollIn .4s $easeInOutCirc;
+
+			@include mq(lg) {
+				content: none;
+				animation: none;
+			}
+		}
+	}
+}
+
+@keyframes scrollOut {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+		display: none;
+	}
+}
+
+@keyframes scrollIn {
+	0% {
+		opacity: 0;
+		display: none;
+		visibility: hidden;
+	}
+
+	100% {
+		display: block;
+		visibility: visible;
+		opacity: 1;
+	}
+}

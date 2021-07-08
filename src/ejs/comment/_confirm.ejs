@@ -1,0 +1,44 @@
+<% const page='sub'; %>
+<%- include('../components/_header',{ meta: data.pageMeta[page]}); %>
+
+<main class="l-main p-bbs-page-main">
+	<div class="p-bbs-page-container p-comment-page-container">
+		<div class="p-bbs-page-inner p-bbs-rule-inner p-bbs-faq-inner p-comment-page-inner p-comment-confirm-page-inner">
+			<section class="p-comment-content">
+				<h1 class="title">投稿内容の確認<span class="icon"><img src="../img/ic-comment-check.svg" alt="" width="40"
+							height="auto"></span>
+				</h1>
+				<div class="comment-form-area">
+					<form id="commentForm" action="">
+						<dl>
+							<div class="name">
+								<dt><label>ニックネーム</label></dt>
+								<dd>
+									Amuseテスト
+								</dd>
+							</div>
+							<div class="content">
+								<dt><label>コメント<span>※<br>(400字以内)</span></label></dt>
+								<dd>
+									この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。
+									この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。
+								</dd>
+							</div>
+						</dl>
+					</form>
+				</div>
+				<div class="p-comment-confirm-btn-container">
+					<a href="#" class="c-btn__viewall p-comment-confirm-btn">修正</a>
+					<a href="#" class="c-btn__viewall p-comment-confirm-btn">投稿する</a>
+				</div>
+			</section>
+		</div>
+		<!-- p-info-container -->
+		<div class="c-btn__anchor p-btn__anchor-white">
+			<a href="#js-anchor">
+				<img class="anchor-img" src="../img/ic-top-anchor.svg" alt="">
+				<span>TOP</span></a>
+		</div>
+	</div>
+</main>
+<%- include('../components/_footer',{ meta: data.pageMeta[page]}); %>

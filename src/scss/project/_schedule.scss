@@ -1,0 +1,19 @@
+@use '../global'as *;
+
+body.is-sub.is-schedule {
+	.anchor-btn {
+		display: none;
+	}
+}
+
+.calendar-container {
+	margin-top: vw(195);
+	margin-bottom: vw(115);
+	width: 100%;
+
+	@include mq(md) {
+		margin-top: 180px;
+		margin-bottom: 130px;
+	}
+
+}

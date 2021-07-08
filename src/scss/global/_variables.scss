@@ -1,0 +1,180 @@
+// color
+$white:#ffffff;
+$black:#000;
+$blue:#00B9E6;
+$green:#00DC64;
+$orange:#FFA870;
+$pink:#FF84B4;
+$red:#DF464C;
+$redWarning:#FF0000;
+$purple:#B480FF;
+$borderGray:#DBDCDC;
+$formGray:#AEAEAF;
+$allGray:#969696;
+$pagerGray:#828282;
+
+// $spInner: vw(670);
+$spInnerPer: 87.24%;
+$pcInner:820px;
+$pcOuter:1000px;
+$pcMax:1366px;
+
+// ブレイクポイント
+$breakpoints: ( // 'xs': (min-width: 0),
+	'xs': (max-width: 374px),
+	'sm': (min-width: 520px),
+	'md': (min-width: 768px),
+	'lg': (min-width: 992px),
+	'th': (min-width: 1000px),
+	'xl': (min-width: 1367px),
+	'xxl': (min-width: 1980px)) !default;
+
+//デザインカンプサイズ
+@function vw($size) {
+	// @return $size / 768 * 100vw;
+	@return $size / 768 * 100vw;
+}
+
+@function vw_lg($size) {
+	@return $size / 1366 * 100vw;
+}
+
+@function vh($size) {
+	@return $size / 1440 * 100vh;
+}
+
+@function vh_lg($size) {
+	@return $size / 900 * 100vh;
+}
+
+
+// 画像パス
+$imgDir: "../img/";
+
+// z-indexの管理
+$z-index: (body, slider, slider-on, header, header-on, drawer-modal, drawer-modal-on);
+
+@function z-index($module) {
+	@return index($z-index, $module);
+}
+
+// イージング
+$easeOutExpo:cubic-bezier(0.16, 1, 0.3, 1);
+$easeOutCirc:cubic-bezier(0, 0.55, 0.45, 1);
+$easeInCirc:cubic-bezier(0.55, 0, 1, 0.45);
+$easeInOutCirc:cubic-bezier(0.65, 0, 0.35, 1);
+
+// font family
+$yugothic: "Yu Gothic Medium",
+"游ゴシック Medium",
+YuGothic,
+"游ゴシック体",
+"ヒラギノ角ゴ Pro W3",
+"メイリオ",
+sans-serif;
+
+// $josefinL:"josefin-Light",
+// sans-serif;
+
+// $josefinR:"josefin-Regular",
+// sans-serif;
+// $josefinM:"josefin-Medium",
+// sans-serif;
+// $josefinMI:"josefin-MediumItalic",
+// sans-serif;
+
+// $josefinSB:"josefin-SemiBold",
+// sans-serif;
+@mixin josefinL {
+	font-family: 'Josefin Sans',
+		sans-serif;
+	;
+	font-weight: 300;
+}
+
+@mixin josefinR {
+	font-family: 'Josefin Sans',
+		sans-serif;
+	;
+	font-weight: 400;
+}
+
+@mixin josefinM {
+	font-family: 'Josefin Sans',
+		sans-serif;
+	;
+	font-weight: 500;
+}
+
+@mixin josefinMI {
+	font-family: 'Josefin Sans',
+		sans-serif;
+	;
+	font-weight: 500;
+	font-style: italic;
+}
+
+@mixin josefinSB {
+	font-family: 'Josefin Sans',
+		sans-serif;
+	;
+	font-weight: 600;
+}
+
+@mixin josefinB {
+	font-family: 'Josefin Sans',
+		sans-serif;
+	;
+	font-weight: 700;
+}
+
+// $josefinB:"josefin-Bold",
+// sans-serif;
+
+// @font-face {
+// 	font-family: "josefin-Light";
+// 	src: url("../fonts/josefinL.woff2") format("woff2"),
+// 		url("../fonts/josefinL.woff") format("woff"), url("../fonts/josefinL.ttf") format("truetype");
+// 	font-display: swap;
+// }
+
+// @font-face {
+// 	font-family: "josefin-Regular";
+// 	src: url("../fonts/josefinR.woff2") format("woff2"),
+// 		url("../fonts/josefinR.woff") format("woff"),
+// 		url("../fonts/josefinR.ttf") format("truetype");
+// 	font-display: swap;
+// }
+
+// @font-face {
+// 	font-family: "josefin-Medium";
+// 	src: url("../fonts/josefinM.woff2") format("woff2"),
+// 		url("../fonts/josefinM.woff") format("woff"),
+// 		url("../fonts/josefinM.ttf") format("truetype");
+// 	font-display: swap;
+// }
+
+// @font-face {
+// 	font-family: "josefin-MediumItalic";
+// 	src: url("../fonts/josefinMI.woff2") format("woff2"),
+// 		url("../fonts/josefinMI.woff") format("woff"),
+// 		url("../fonts/josefinMI.ttf") format("truetype");
+// 	font-display: swap;
+// }
+
+// @font-face {
+// 	font-family: "josefin-SemiBold";
+// 	src: url("../fonts/JosefinSans-SemiBold.ttf") format("ttfs"),
+// 		url("../fonts/josefinSB.woff2") format("woff2"),
+// 		url("../fonts/josefinSB.woff") format("woff"),
+// 		url("../fonts/josefinSB.ttf") format("truetype");
+// 	font-display: swap;
+// }
+
+// @font-face {
+// 	font-family: "josefin-Bold";
+// 	src: url("../fonts/josefinB.woff2") format("woff2"),
+// 		url("../fonts/josefinB.woff") format("woff"),
+// 		url("../fonts/josefinB.ttf") format("truetype");
+// 	font-display: swap;
+// }

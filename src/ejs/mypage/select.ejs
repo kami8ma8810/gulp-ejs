@@ -1,0 +1,65 @@
+<% const page='mypage'; %>
+<%- include('../components/_header',{ meta: data.pageMeta[page]}); %>
+
+<main class="l-main l-page-main c-page-bg">
+	<div class="l-page-outer">
+		<h1 class="l-page-title __jp">会員証選択</h1>
+		<div class="card-select-container">
+			<form action="">
+				<div class="card-select-items">
+					<div class="card-select-item">
+						<label><input type="radio" name="radio" value="" checked><span class="outside"><span
+									class="inside"></span></span>通常会員証</label>
+						<div class="card-img u-dropshadow">
+							<!-- <img src="../assets/img/img-card.png" alt="" width="2500" height="auto"> -->
+							<div class="c-member-card __1">
+								<div class="member-card__logo"><img src="../assets/img/text-member-card.svg"
+										alt="MIYU TOMITA official fanclub" width="280" height="auto"></div>
+								<div class="member-card__text">
+									<div class="number">
+										<p class="number__text title">Member’s No</p>
+										<p class="number__content">0000001</p>
+									</div>
+									<div class="name">
+										<p class="name__text title">Nick Name</p>
+										<p class="name__content">ニックネームは２０文字までに制限されます</p>
+									</div>
+									<p class="duration"><span class="text">継続期間</span><span class="days">3日</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card-select-item">
+						<label><input type="radio" name="radio" value=""><span class="outside"><span
+									class="inside"></span></span>365日継続特典</label>
+						<div class="card-img u-dropshadow">
+							<!-- <img src="../assets/img/img-card.png" alt="" width="2500" height="auto"> -->
+							<div class="c-member-card __1">
+								<div class="member-card__logo"><img src="../assets/img/text-member-card.svg"
+										alt="MIYU TOMITA official fanclub" width="280" height="auto"></div>
+								<div class="member-card__text">
+									<div class="number">
+										<p class="number__text title">Member’s No</p>
+										<p class="number__content">0000001</p>
+									</div>
+									<div class="name">
+										<p class="name__text title">Nick Name</p>
+										<p class="name__content">ニックネームは２０文字までに制限されます</p>
+									</div>
+									<p class="duration"><span class="text">継続期間</span><span class="days">365日</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+			<div class="c-btn__container">
+				<a href="./confirm.html" class="c-btn__confirm btn-confirm-arrow">確認する</a>
+			</div>
+		</div>
+		<div class="l-page-inner">
+		</div>
+	</div>
+
+</main>
+<%- include('../components/_footer',{ meta: data.pageMeta[page]}); %>

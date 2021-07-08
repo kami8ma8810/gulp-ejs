@@ -1,0 +1,142 @@
+@use '../global'as *;
+
+.c-member-card {
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	height: vw(380);
+	border-radius: vw(14.5);
+
+	@include mq(md) {
+		width: 420px;
+		height: 266px;
+		border-radius: 10px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&.__1 {
+		background-image: url(#{$imgDir}bg-member-card01.jpg);
+	}
+
+	.member-card__logo {
+		flex: 0 0 auto;
+		width: vw(301);
+		margin-top: vw(79);
+		text-align: right;
+
+		@include mq(md) {
+			width: 210px;
+			margin-top: 57px;
+		}
+
+		img {
+			width: vw(258.6);
+
+			@include mq(md) {
+				width: 181px;
+			}
+		}
+	}
+
+	.member-card__text {
+		@media screen and (max-width:320px) {
+			margin-left: vw(59);
+		}
+
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		color: $white;
+		height: 100%;
+		@include josefinR;
+		padding-top: vw(56);
+		// padding-right: vw(32);
+		// margin-left: vw(89);
+		margin-left: vw(79);
+
+		@include mq(md) {
+			padding-top: 41px;
+			// padding-right: 30px;
+			padding-right: 0;
+			// margin-left: 61px;
+			margin-left: 51px;
+		}
+
+		.title {
+			font-size: vw(20);
+			letter-spacing: .02em;
+
+			@include mq(md) {
+				font-size: 14px;
+				letter-spacing: .03em;
+			}
+		}
+
+		.number {
+			margin-bottom: vw(35);
+
+			@include mq(md) {
+				margin-bottom: 24px;
+			}
+		}
+
+		.number__content {
+			font-size: vw(34);
+			margin-top: vw(9);
+			letter-spacing: .08em;
+
+			@include mq(md) {
+				font-size: 23.8px;
+				margin-top: 8px;
+			}
+		}
+
+		.name__content {
+			padding-right: .5em;
+			font-size: vw(18);
+			// font-size: vw(28);
+			margin-top: vw(15);
+			line-height: 1.2;
+
+			@include mq(md) {
+				font-size: 14px;
+				margin-top: 11px;
+			}
+		}
+
+		.duration {
+			position: absolute;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			white-space: nowrap;
+			width: vw(205);
+			padding-right: vw(32);
+			font-size: vw(23);
+			bottom: vw(45);
+
+			@include mq(md) {
+				width: 149px;
+				padding-right: 30px;
+				font-size: 16px;
+				bottom: 30px;
+			}
+
+			.text {
+				letter-spacing: .15em;
+				margin-right: .5em;
+
+				@include mq(md) {
+					letter-spacing: .15em;
+					margin-right: .5em;
+				}
+			}
+		}
+	}
+}

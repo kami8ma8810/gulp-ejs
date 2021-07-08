@@ -1,0 +1,331 @@
+.c-bg-bottom {
+  min-height: 100vh;
+  background-image: url(../img/bg/bg-top-sp.jpg);
+  background-position: bottom;
+  background-size: 124% auto;
+}
+
+.c-bg-bottom.is-sub {
+  background-position: bottom;
+  background-size: contain;
+}
+
+.c-bg-bottom.is-mypage {
+  background-image: url(../img/bg/bg-mypage-bottom-sp.png);
+}
+
+.c-bg-bottom.is-comment {
+  background-image: url(../img/bg/bg-com-bottom-sp.png);
+}
+
+.c-bg-bottom.is-error {
+  background-image: url(../img/bg/bg-er-bottom-sp.png);
+}
+
+.c-bg-bottom.is-info {
+  background-image: url(../img/bg/bg-info-bottom-sp.png);
+}
+
+.c-bg-bottom.is-memories {
+  background-image: url(../img/bg/bg-memories-bottom-sp.png);
+}
+
+.c-bg-bottom.is-movie {
+  background-image: url(../img/bg/bg-movie-bottom-sp.png);
+}
+
+.c-bg-bottom.is-podcast {
+  background-image: url(../img/bg/bg-pod-bottom-sp.png);
+}
+
+.c-bg-bottom.is-profile {
+  background-image: url(../img/bg/bg-prof-bottom-sp.png);
+}
+
+.c-bg-bottom.is-report {
+  background-image: url(../img/bg/bg-repo-bottom-sp.png);
+}
+
+.c-bg-bottom.is-schedule {
+  background-image: url(../img/bg/bg-sch-bottom-sp.png);
+}
+
+.c-bg-bottom.is-special {
+  background-image: url(../img/bg/bg-spe-bottom-sp.png);
+}
+
+.c-bg-bottom.is-talkbox {
+  background-image: url(../img/bg/bg-talk-bottom-sp.png);
+}
+
+.c-page-bg {
+  min-height: 100vh;
+  background-position: top;
+  background-size: contain;
+}
+
+.is-mypage .c-page-bg {
+  background-image: url(../img/bg/bg-mypage-top-sp.png);
+}
+
+.is-comment .c-page-bg {
+  background-image: url(../img/bg/bg-com-top-sp.png);
+}
+
+.is-error .c-page-bg {
+  background-image: url(../img/bg/bg-er-top-sp.png);
+}
+
+.is-info .c-page-bg {
+  background-image: url(../img/bg/bg-info-top-sp.png);
+}
+
+.is-memories .c-page-bg {
+  background-image: url(../img/bg/bg-memories-top-sp.png);
+}
+
+.is-movie .c-page-bg {
+  background-image: url(../img/bg/bg-movie-top-sp.png);
+}
+
+.is-podcast .c-page-bg {
+  background-image: url(../img/bg/bg-pod-top-sp.png);
+}
+
+.is-profile .c-page-bg {
+  background-image: url(../img/bg/bg-prof-top-sp.png);
+}
+
+.is-report .c-page-bg {
+  background-image: url(../img/bg/bg-repo-top-sp.png);
+}
+
+.is-schedule .c-page-bg {
+  background-image: url(../img/bg/bg-sch-top-sp.png);
+}
+
+.is-special .c-page-bg {
+  background-image: url(../img/bg/bg-spe-top-sp.png);
+}
+
+.is-talkbox .c-page-bg {
+  background-image: url(../img/bg/bg-talk-top-sp.png);
+}
+
+@media screen and (min-width: 520px) {
+  .c-bg-bottom {
+    background-size: 100% 150%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .c-bg-bottom.is-mypage {
+    background-image: url(../img/bg/bg-mypage-bottom-pc.png);
+  }
+
+  .c-bg-bottom.is-comment {
+    background-image: url(../img/bg/bg-com-bottom-pc.png);
+  }
+
+  .c-bg-bottom.is-error {
+    background-image: url(../img/bg/bg-er-bottom-pc.png);
+  }
+
+  .c-bg-bottom.is-info {
+    background-image: url(../img/bg/bg-info-bottom-pc.png);
+  }
+
+  .c-bg-bottom.is-memories {
+    background-image: url(../img/bg/bg-memories-bottom-pc.png);
+  }
+
+  .c-bg-bottom.is-movie {
+    background-image: url(../img/bg/bg-movie-bottom-pc.png);
+  }
+
+  .c-bg-bottom.is-podcast {
+    background-image: url(../img/bg/bg-pod-bottom-pc.png);
+  }
+
+  .c-bg-bottom.is-profile {
+    background-image: url(../img/bg/bg-prof-bottom-pc.png);
+  }
+
+  .c-bg-bottom.is-report {
+    background-image: url(../img/bg/bg-repo-bottom-pc.png);
+  }
+
+  .c-bg-bottom.is-schedule {
+    background-image: url(../img/bg/bg-sch-bottom-pc.png);
+  }
+
+  .c-bg-bottom.is-special {
+    background-image: url(../img/bg/bg-spe-bottom-pc.png);
+  }
+
+  .c-bg-bottom.is-talkbox {
+    background-image: url(../img/bg/bg-talk-bottom-pc.png);
+  }
+
+  .is-mypage .c-page-bg {
+    background-image: url(../img/bg/bg-mypage-top-pc.png);
+  }
+
+  .is-comment .c-page-bg {
+    background-image: url(../img/bg/bg-com-top-pc.png);
+  }
+
+  .is-error .c-page-bg {
+    background-image: url(../img/bg/bg-er-top-pc.png);
+  }
+
+  .is-info .c-page-bg {
+    background-image: url(../img/bg/bg-info-top-pc.png);
+  }
+
+  .is-memories .c-page-bg {
+    background-image: url(../img/bg/bg-memories-top-pc.png);
+  }
+
+  .is-movie .c-page-bg {
+    background-image: url(../img/bg/bg-movie-top-pc.png);
+  }
+
+  .is-podcast .c-page-bg {
+    background-image: url(../img/bg/bg-pod-top-pc.png);
+  }
+
+  .is-profile .c-page-bg {
+    background-image: url(../img/bg/bg-prof-top-pc.png);
+  }
+
+  .is-report .c-page-bg {
+    background-image: url(../img/bg/bg-repo-top-pc.png);
+  }
+
+  .is-schedule .c-page-bg {
+    background-image: url(../img/bg/bg-sch-top-pc.png);
+  }
+
+  .is-special .c-page-bg {
+    background-image: url(../img/bg/bg-spe-top-pc.png);
+  }
+
+  .is-talkbox .c-page-bg {
+    background-image: url(../img/bg/bg-talk-top-pc.png);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .c-bg-bottom {
+    background-image: url(../img/bg/bg-top-pc-wide.jpg);
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 1367px) {
+  .c-bg-bottom.is-sub {
+    background-size: 200% auto;
+  }
+
+  .c-bg-bottom.is-mypage {
+    background-image: url(../img/bg/bg-mypage-bottom-pc-wide.png);
+  }
+
+  .c-bg-bottom.is-comment {
+    background-image: url(../img/bg/bg-com-bottom-pc-wide.png);
+  }
+
+  .c-bg-bottom.is-error {
+    background-image: url(../img/bg/bg-er-bottom-pc-wide.png);
+  }
+
+  .c-bg-bottom.is-info {
+    background-image: url(../img/bg/bg-info-bottom-pc-wide.png);
+  }
+
+  .c-bg-bottom.is-memories {
+    background-image: url(../img/bg/bg-memories-bottom-pc-wide.png);
+  }
+
+  .c-bg-bottom.is-movie {
+    background-image: url(../img/bg/bg-movie-bottom-pc-wide.png);
+  }
+
+  .c-bg-bottom.is-podcast {
+    background-image: url(../img/bg/bg-pod-bottom-pc-wide.png);
+  }
+
+  .c-bg-bottom.is-profile {
+    background-image: url(../img/bg/bg-prof-bottom-pc-wide.png);
+  }
+
+  .c-bg-bottom.is-report {
+    background-image: url(../img/bg/bg-repo-bottom-pc-wide.png);
+  }
+
+  .c-bg-bottom.is-schedule {
+    background-image: url(../img/bg/bg-sch-bottom-pc-wide.png);
+  }
+
+  .c-bg-bottom.is-special {
+    background-image: url(../img/bg/bg-spe-bottom-pc-wide.png);
+  }
+
+  .c-bg-bottom.is-talkbox {
+    background-image: url(../img/bg/bg-talk-bottom-pc-wide.png);
+  }
+
+  .c-page-bg {
+    background-size: 200% auto;
+  }
+
+  .is-mypage .c-page-bg {
+    background-image: url(../img/bg/bg-mypage-top-pc-wide.png);
+  }
+
+  .is-comment .c-page-bg {
+    background-image: url(../img/bg/bg-com-top-pc-wide.png);
+  }
+
+  .is-error .c-page-bg {
+    background-image: url(../img/bg/bg-er-top-pc-wide.png);
+  }
+
+  .is-info .c-page-bg {
+    background-image: url(../img/bg/bg-info-top-pc-wide.png);
+  }
+
+  .is-memories .c-page-bg {
+    background-image: url(../img/bg/bg-memories-top-pc-wide.png);
+  }
+
+  .is-movie .c-page-bg {
+    background-image: url(../img/bg/bg-movie-top-pc-wide.png);
+  }
+
+  .is-podcast .c-page-bg {
+    background-image: url(../img/bg/bg-pod-top-pc-wide.png);
+  }
+
+  .is-profile .c-page-bg {
+    background-image: url(../img/bg/bg-prof-top-pc-wide.png);
+  }
+
+  .is-report .c-page-bg {
+    background-image: url(../img/bg/bg-repo-top-pc-wide.png);
+  }
+
+  .is-schedule .c-page-bg {
+    background-image: url(../img/bg/bg-sch-top-pc-wide.png);
+  }
+
+  .is-special .c-page-bg {
+    background-image: url(../img/bg/bg-spe-top-pc-wide.png);
+  }
+
+  .is-talkbox .c-page-bg {
+    background-image: url(../img/bg/bg-talk-top-pc-wide.png);
+  }
+}
+/*# sourceMappingURL=map/bg.css.map */

@@ -1,0 +1,297 @@
+@use '../global'as *;
+
+.modal-area {
+	display: none;
+	position: fixed;
+	z-index: z-index(drawer-modal);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.modal-bg {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 87.24%;
+	max-width: 670px;
+	overflow-y: hidden;
+	background-color: #fff;
+
+	@include mq(md) {
+		width: 670px;
+	}
+}
+
+// モーダル中身（ログイン前）
+.modal-inner {
+	// position: relative;
+	padding: vw(125) 1px vw(85);
+	width: vw(540);
+	max-width: 540px;
+	margin-left: auto;
+	margin-right: auto;
+
+	@include mq(md) {
+		width: 460px;
+		padding: 60px 0 40px;
+	}
+
+	dt {
+		font-size: vw(22);
+		margin-bottom: vw(10);
+
+		@include mq(md) {
+			font-size: 14px;
+			margin-bottom: 7px;
+		}
+	}
+
+	dd input {
+		height: vw(80);
+		line-height: vw(80);
+		font-size: vw(22);
+		padding: vw(25) vw(30);
+		width: 100%;
+		border-color: $formGray;
+		border-radius: vw(8);
+		border-style: solid;
+		border-width: 0.5px;
+		-webkit-appearance: none;
+		outline: none;
+
+		@include mq(md) {
+			height: auto;
+			line-height: 1;
+			font-size: 16px;
+			padding: 15px;
+			border-radius: 5px;
+		}
+
+		&::placeholder {
+			color: $formGray;
+		}
+
+		&:focus {
+			outline-color: $blue;
+			outline-style: solid;
+		}
+	}
+
+	.login-id {
+		margin-bottom: vw(20);
+
+		@include mq(md) {
+			margin-bottom: 18px;
+		}
+
+		input {
+			-webkit-appearance: none;
+
+			&:focus {
+				outline-color: $blue;
+			}
+
+			border: 1px solid $formGray;
+		}
+	}
+
+	.login-btn {
+
+		&>a,
+		button {
+			display: block;
+			width: vw(540);
+			max-width: 540px;
+			max-height: 120px;
+			padding: vw(42) 0;
+			// font-family: $josefinR;
+			@include josefinR;
+			background-color: $blue;
+			color: $white;
+			text-align: center;
+			margin-top: vw(70);
+			margin-left: auto;
+			margin-right: auto;
+			font-size: vw(38);
+			letter-spacing: .1em;
+			color: $white;
+			cursor: pointer;
+
+			&:focus {
+				outline: 2px solid $orange;
+			}
+
+			&:active {
+				outline: none;
+			}
+
+			@include mq(md) {
+				font-size: 20px;
+				margin-top: 40px;
+				width: 300px;
+				height: 76px;
+				line-height: 76px;
+				padding: 0;
+			}
+		}
+
+		&.__signup {
+
+			&>a,
+			button {
+				margin-top: vw(30);
+				margin-bottom: vw(80);
+				display: block;
+				background-color: $black;
+				font-size: vw(28);
+				letter-spacing: .05em;
+				padding: vw(47) 0;
+
+				@include mq(md) {
+					font-size: 16px;
+					margin-top: 20px;
+					margin-bottom: 35px;
+					padding: 0;
+				}
+			}
+		}
+	}
+
+	.login-desc {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: vw(22);
+
+		@include mq(md) {
+			font-size: 14px;
+			width: 300px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+}
+
+// モーダル中身（ログイン後）
+.modal-inner.login {
+	width: vw(620);
+	max-width: 620px;
+	padding-bottom: vw(100);
+
+	@include mq(md) {
+		padding-bottom: 50px;
+	}
+
+	.card {
+		width: 100%;
+		height: auto;
+		margin-bottom: vw(95);
+
+		@include mq(md) {
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 50px;
+		}
+
+		@include mq(lg) {
+			width: 420px;
+		}
+	}
+
+	.btn-container {
+		width: vw(540);
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+
+		@include mq(md) {
+			width: 300px;
+		}
+
+		a {
+			height: vw(80);
+			line-height: vw(80);
+
+			@include mq(md) {
+				height: 60px;
+				line-height: 60px;
+			}
+
+			&:focus {
+				// border: none;
+				outline-color: $blue;
+			}
+
+			&+a {
+				margin-top: vw(30);
+
+				@include mq(md) {
+					margin-top: 20px;
+				}
+			}
+		}
+
+		.c-btn__border {
+			font-size: vw(24);
+			display: block;
+
+			@include mq(md) {
+				font-size: 16px;
+			}
+
+			&.external-link {
+				background-image: url(#{$imgDir}ic-external-gray.svg);
+				background-size: 1em;
+				background-position: right 4.5em center;
+
+				@include mq(md) {
+					background-size: .8em;
+					background-position: right 3.2em center;
+				}
+			}
+		}
+
+		.c-btn__login {
+			font-size: vw(28);
+			display: block;
+
+			@include mq(md) {
+				font-size: 20px;
+			}
+
+		}
+	}
+}
+
+
+.btn-close-modal {
+	position: absolute;
+	top: vw(30);
+	right: vw(30);
+	display: inline-block;
+	cursor: pointer;
+	width: vw(40);
+	height: vw(40);
+
+	@include mq(md) {
+		top: 20px;
+		right: 20px;
+		width: 28px;
+		height: 28px;
+	}
+
+	img {
+		vertical-align: middle;
+	}
+}

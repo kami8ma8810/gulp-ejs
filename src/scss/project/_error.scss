@@ -1,0 +1,53 @@
+@use '../global'as *;
+
+body.is-sub.is-error,
+main.error-main {
+	min-height: calc(100vh - 140px);
+
+	.anchor-btn {
+		display: none;
+	}
+}
+
+main.error-main {
+	margin-bottom: vw(140);
+
+	@include mq(lg) {
+		margin-bottom: 40px;
+	}
+}
+
+.error-page-inner {
+	@include mq(md) {
+		padding-top: 55px;
+	}
+}
+
+.l-page-title.error-title {
+	text-align: center;
+	display: block;
+	@include josefinR;
+	// font-family: $josefinR;
+	margin-bottom: vw(300);
+
+	@include mq(md) {
+		// font-family: $josefinM;
+		@include josefinM;
+		margin-bottom: 210px;
+	}
+
+	&::before {
+		content: none;
+	}
+}
+
+.error-desc {
+	text-align: center;
+	font-size: vw(24);
+	margin-bottom: vw(320);
+
+	@include mq(md) {
+		font-size: 16px;
+		margin-bottom: 210px;
+	}
+}

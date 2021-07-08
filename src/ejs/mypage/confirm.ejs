@@ -1,0 +1,40 @@
+<% const page='mypage'; %>
+<%- include('../components/_header',{ meta: data.pageMeta[page]}); %>
+
+<main class="l-main l-page-main c-page-bg">
+	<div class="l-page-outer">
+		<h1 class="l-page-title __jp">会員証確認</h1>
+		<div class="card-confirm-container">
+			<div class="card-img u-dropshadow confirm-card-img">
+				<!-- カードの背景デザインは__1のクラスで変更 -->
+				<div class="c-member-card __1">
+					<div class="member-card__logo"><img src="../assets/img/text-member-card.svg"
+							alt="MIYU TOMITA official fanclub" width="280" height="auto"></div>
+					<div class="member-card__text">
+						<div class="number">
+							<p class="number__text title">Member’s No</p>
+							<p class="number__content">0000001</p>
+						</div>
+						<div class="name">
+							<p class="name__text title">Nick Name</p>
+							<!-- ニックネームは20文字制限 -->
+							<p class="name__content">ニックネームは２０文字までに制限されます</p>
+							<!-- ニックネームは20文字制限 -->
+						</div>
+						<p class="duration"><span class="text">継続期間</span><span class="days">365日</span></p>
+					</div>
+				</div>
+			</div>
+			<p class="l-page-desc confirm-desc">こちらの会員証に変更します。<br class="is-sp">
+				「変更する」ボタンを押してください。</p>
+			<div class="c-btn__container">
+				<a href="#" class="c-btn__confirm btn-confirm-arrow">変更する</a>
+				<a href="#" class="c-btn__confirm btn-confirm-arrow">修正する</a>
+			</div>
+		</div>
+		<div class="l-page-inner">
+		</div>
+	</div>
+
+</main>
+<%- include('../components/_footer',{ meta: data.pageMeta[page]}); %>

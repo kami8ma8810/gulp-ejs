@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="description" content="富田美憂オフィシャルサイト">
+		<title>富田美憂オフィシャルサイト</title>
+		<!-- ===========メタ情報=========== -->
+		<meta name="keywords" content="富田美憂,とみたみゆ,tomitamiyu,トミタミユ,富田美憂オフィシャルサイト,富田美憂ファンクラブ,＋ you,プラスユー,ぷらすゆー,声優">
+		<meta http-equiv="x-dns-prefetch-control" content="on">
+		<link rel="dns-prefetch" href="//tomitamiyu.com/">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="富田美憂オフィシャルサイト">
+		<meta property="og:description" content="声優／アーティスト「富田美憂(とみたみゆ)」のオフィシャルサイト。オフィシャルファンクラブ「+ you」。">
+		<meta property="og:image" content="組込時に追記">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:image:src" content="組込時に追記">
+		<meta name="twitter:site" content="@miyustaff">
+		<meta name="twitter:creator" content="@miyustaff">
+		<meta name="twitter:title" content="富田美憂オフィシャルサイト">
+		<meta name="twitter:description" content="声優／アーティスト「富田美憂(とみたみゆ)」のオフィシャルサイト。オフィシャルファンクラブ「+ you」。">
+		<meta name="thumbnail" content="組込時に追記">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+		<link rel="shortcut icon" href="組込時に追記" type="image/x-icon">
+		<link rel="apple-touch-icon-precomposed" href="組込時に追記">
+		<!-- ===========// メタ情報=========== -->
+		<!-- ===========assets=========== -->
+		<!-- google fonts -->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+		<!-- google fonts -->
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" media="print" onload="this.media='all'">
+		<link rel="stylesheet" href="../assets/css/bg.css" media="print" onload="this.media='all'">
+		<link rel="stylesheet" href="../assets/css/style.css">
+		<link rel="stylesheet" href="../assets/css/calendar.css">
+		<link rel="stylesheet" href="../assets/css/magnific-popup.css">
+		<script src="../assets/js/calendar.js"></script>
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<script src="../assets/js/jquery.magnific-popup.min.js"></script>
+		<!-- Google Calendar -->
+		<script>
+			document.addEventListener('DOMContentLoaded', function()
+			{
+				var calendarEl = document.getElementById('calendar');
+				var calendar = new FullCalendar.Calendar(calendarEl,
+				{
+					headerToolbar:
+					{
+						// left: 'prev,next today',
+						// left: 'none',
+						// center: 'title',
+						left: 'title',
+						// right: 'dayGridMonth,listYear'
+						right: 'prev,next',
+					},
+					displayEventTime: false, // don't show the time column in list view
+					// THIS KEY WON'T WORK IN PRODUCTION!!!
+					// To make your own Google API key, follow the directions here:
+					// http://fullcalendar.io/docs/google_calendar/
+					googleCalendarApiKey: 'AIzaSyDcnW6WejpTOCffshGDDb4neIrXVUA1EAE',
+					// US Holidays
+					events: 'tomitamiyu.19991115@gmail.com',
+					eventClick: function(arg)
+					{
+						// opens events in a popup window
+						window.open(arg.event.url, 'google-calendar-event', 'width=700,height=600');
+						arg.jsEvent.preventDefault(); // don't navigate in main tab
+					},
+					loading: function(bool)
+					{
+						document.getElementById('loading').style.display = bool ? 'block' : 'none';
+					},
+				});
+				calendar.render();
+			});
+		</script>
+		<!-- Google Calendar -->
+	</head>
+	<body id="js-anchor" class="c-bg-bottom is-sub is-info" ontouchstart="">
+		<div id="js-loading" class="loading">
+			<img class="loading-img" src="../assets/img/text-loading.svg" alt="">
+		</div>
+		<header class="header" id="js-headerChange">
+			<div class="header-inner">
+				<h1 class="header-logo">
+					<a href="../">
+						<picture>
+							<source media="(min-width: 992px)" srcset="../assets/img/text-logo-lg.svg">
+							<source media="(min-width: 300px)" srcset="../assets/img/text-logo-sm.svg">
+							<img src="../assets/img/text-logo-sm.svg" alt="">
+						</picture>
+						<span class="sr-only">MIYU TOMIYA OFFICIAL SITE</span>
+					</a>
+				</h1>
+				<div class="header-btn-container">
+					<ul class="header-sns-items">
+						<li class="header-sns-item youtube">
+							<a href="#" target="_blank" rel="noopener noreferrer"><img src="../assets/img/ic-youtube.svg" width="100" height="auto" alt="YouTubeへのリンク"></a>
+						</li>
+						<li class="header-sns-item twitter">
+							<a href="#" target="_blank" rel="noopener noreferrer"><img src="../assets/img/ic-twitter.svg" width="100" height="auto" alt="富田美憂のTwitterへのリンク"></a>
+						</li>
+						<li class="header-sns-item twitter-staff">
+							<a href="#" target="_blank" rel="noopener noreferrer"><img src="../assets/img/ic-twitter-staff.svg" width="100" height="auto" alt="スタッフのTwitterへのリンク"></a>
+						</li>
+					</ul>
+					<div class="header-btn-items">
+						<div class="c-btn__login header-login-btn is-login js-openModal"> MYPAGE </div>
+						<div class="hamburger-btn">
+							<button type="button" id="js-drawerOpen" aria-controls="drawer" aria-expanded="false">
+								<span class="hamburger__line">
+									<span class="sr-only">メニューを開く</span>
+								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- drawer -->
+		<div id="js-drawer" class="l-drawer js-drawer" aria-expanded="false">
+			<div class="l-drawer__backdrop js-backdrop"></div>
+			<nav class="l-drawer__nav drawer-nav">
+				<div id="js-closeDrawer" class="drawer-close-btn">
+					<button type="button" aria-controls="drawer" aria-expanded="false">
+						<img src="../assets/img/btn-drawer-close.svg" class="Nav-button-image" alt="メニューを閉じる" width="18" height="18">
+					</button>
+				</div>
+				<ul class="drawer-nav-items f-jfR">
+					<li class="drawer-nav-item">
+						<a href="../info/">INFORMATION</a>
+					</li>
+					<li class="drawer-nav-item external-link">
+						<a href="#" target="_blank" rel="noopener noreferrer">DISCOGRAPHY</a>
+					</li>
+					<li class="drawer-nav-item">
+						<a href="../profile/">PROFILE</a>
+					</li>
+					<li class="drawer-nav-item">
+						<a href="../schedule/">SCHEDULE</a>
+					</li>
+					<li class="drawer-nav-item external-link">
+						<a href="#" target="_blank" rel="noopener noreferrer">GOODS</a>
+					</li>
+					<!-- FC AREA -->
+					<ul class="drawer-fc-items">
+						<li class="drawer-nav-item drawer-fc-title f-jfB"> FANCLUB&ensp;AREA </li>
+						<li class="drawer-nav-item">
+							<a href="../memories/">MEMORIES</a>
+						</li>
+						<li class="drawer-nav-item">
+							<a href="../movie/">MOVIE</a>
+						</li>
+						<li class="drawer-nav-item">
+							<a href="../report/">REPORT</a>
+						</li>
+						<li class="drawer-nav-item">
+							<a href="../podcast/">PODCAST</a>
+						</li>
+						<li class="drawer-nav-item">
+							<a href="../talkbox/">TALKBOX</a>
+						</li>
+						<li class="drawer-nav-item">
+							<a href="../special/">SPECIAL</a>
+						</li>
+					</ul>
+					<!-- // FC AREA -->
+					<ul class="drawer-sns-items">
+						<li class="drawer-sns-item youtube">
+							<a href="#" rel="noopener noreferrer" target="_blank"><img src="../assets/img/ic-youtube.svg" alt="YouTubeへのリンク" width="57" height="auto"></a>
+						</li>
+						<li class="drawer-sns-item twitter">
+							<a href="#" rel="noopener noreferrer" target="_blank"><img src="../assets/img/ic-twitter.svg" alt="富田美憂のTwitterへのリンク" width="47" height="auto"></a>
+						</li>
+						<li class="drawer-sns-item twitter-staff">
+							<a href="#" rel="noopener noreferrer" target="_blank"><img src="../assets/img/ic-twitter-staff.svg" alt="スタッフのTwitterへのリンク" width="57" height="auto"></a>
+						</li>
+					</ul>
+					<ul class="drawer-footer-items f-gothic">
+						<li class="drawer-footer-item"><a href="#">FAQ</a></li>
+						<li class="drawer-footer-item"><a href="#">利用規約</a></li>
+						<li class="drawer-footer-item">
+							<a href="#">プライバシーポリシー</a>
+						</li>
+						<li class="drawer-footer-item"><a href="#">特定商取引法</a></li>
+					</ul>
+				</ul>
+			</nav>
+		</div>
+		<!-- //drawer -->
+		<!-- modal area -->
+		<section id="js-modalArea" class="modal-area">
+			<div id="js-modalBg" class="modal-bg"></div>
+			<div class="modal-container">
+				<div class="modal-inner login">
+					<div class="card u-dropshadow">
+						<!-- <img src="../assets/img/img-card.png" alt="" width="2449" height="auto"> -->
+						<div class="c-member-card __1">
+							<div class="member-card__logo">
+								<img src="../assets/img/text-member-card.svg" alt="MIYU TOMITA official fanclub" width="280" height="auto">
+							</div>
+							<div class="member-card__text">
+								<div class="number">
+									<p class="number__text title">Member’s No</p>
+									<p class="number__content">0000001</p>
+								</div>
+								<div class="name">
+									<p class="name__text title">Nick Name</p>
+									<p class="name__content"> ニックネームは２０文字までに制限されます </p>
+								</div>
+								<p class="duration">
+									<span class="text">継続期間</span><span class="days">100日</span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="btn-container">
+						<a href="#" target="blank" rel="noopener noreferrer" class="c-btn__border external-link">会員情報を修正する</a>
+						<a href="../mypage/select.html" class="c-btn__border">会員証デザイン変更</a>
+						<a href="../index-logout.html" class="c-btn__login">LOGOUT</a>
+					</div>
+					<div id="js-closeModal" class="btn-close-modal">
+						<img src="../assets/img/btn-modal-close.svg" alt="モーダルを閉じる">
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- //modal area -->
+	</body>
+</html>
+<main class="l-main l-page-main c-page-bg">
+	<div class="l-page-outer">
+		<h1 class="l-page-title">INFORMATION</h1>
+		<div class="l-page-inner page-info-inner">
+			<ul class="tab-menu-items">
+				<div>
+					<li class="tab-menu-item js-tabTrigger __1 is-active" data-id="tab01"> ALL </li>
+					<li class="tab-menu-item js-tabTrigger __2" data-id="tab02"> MEDIA </li>
+					<li class="tab-menu-item js-tabTrigger __3" data-id="tab03"> RELEASE </li>
+				</div>
+				<div>
+					<li class="tab-menu-item js-tabTrigger __4" data-id="tab04"> LIVE/EVENT </li>
+					<li class="tab-menu-item js-tabTrigger __5" data-id="tab05"> OTHERS </li>
+					<li class="tab-menu-item js-tabTrigger __6" data-id="tab06"> FANCLUB </li>
+				</div>
+			</ul>
+			<ul class="c-info-items page-info-items">
+				<li class="c-info-item">
+					<article>
+						<div class="c-info-tags">
+							<span class="category __blue">FANCLUB</span>
+							<span class="new"><img src="../assets/img/ic-new-black.svg" alt="NEW"></span>
+							<span class="date">2021.00.00</span>
+						</div>
+						<section>
+							<h3 class="c-info-article-title">
+								<a href="./detail.html"> ニュースタイトルが入ります。ニュースタイトルが入ります。 ニュースタイトルが入ります。ニュースタイトルが入ります。 </a>
+							</h3>
+							<a href="./detail.html" class="c-info-more f-jfR">READ MORE</a>
+						</section>
+					</article>
+				</li>
+				<li class="c-info-item">
+					<article>
+						<div class="c-info-tags">
+							<span class="category __green">MEDIA</span>
+							<span class="new"><img src="../assets/img/ic-new-black.svg" alt="NEW"></span>
+							<span class="date">2021.00.00</span>
+						</div>
+						<section>
+							<h3 class="c-info-article-title">ニュース<a href="./detail.html"> ニュースタイトルが入ります。ニュースタイトルが入ります。 ニュースタイトルが入ります。ニュースタイトルが入ります。 </a></h3>
+							<a href="./detail.html" class="c-info-more f-jfR">READ MORE</a>
+						</section>
+					</article>
+				</li>
+				<li class="c-info-item">
+					<article>
+						<div class="c-info-tags">
+							<span class="category __orange">RELEASE</span>
+							<span class="new"><img src="../assets/img/ic-new-black.svg" alt="NEW"></span>
+							<span class="date">2021.00.00</span>
+						</div>
+						<section>
+							<h3 class="c-info-article-title">ニュース<a href="./detail.html"> ニュースタイトルが入ります。ニュースタイトルが入ります。 ニュースタイトルが入ります。ニュースタイトルが入ります。 </a></h3>
+							<a href="./detail.html" class="c-info-more f-jfR">READ MORE</a>
+						</section>
+					</article>
+				</li>
+				<li class="c-info-item">
+					<article>
+						<div class="c-info-tags">
+							<span class="category __pink">LIVE/EVENT</span>
+							<span class="date">2021.00.00</span>
+						</div>
+						<section>
+							<h3 class="c-info-article-title"><a href="./detail.html"> ニュースタイトルが入ります。ニュースタイトルが入ります。 ニュースタイトルが入ります。ニュースタイトルが入ります。 </a></h3>
+							<a href="./detail.html" class="c-info-more f-jfR">READ MORE</a>
+						</section>
+					</article>
+				</li>
+				<li class="c-info-item">
+					<article>
+						<div class="c-info-tags">
+							<span class="category __purple">OTHERS</span>
+							<span class="date">2021.00.00</span>
+						</div>
+						<section>
+							<h3 class="c-info-article-title"><a href="./detail.html"> ニュースタイトルが入ります。ニュースタイトルが入ります。 ニュースタイトルが入ります。ニュースタイトルが入ります。 </a></h3>
+							<a href="./detail.html" class="c-info-more f-jfR">READ MORE</a>
+						</section>
+					</article>
+				</li>
+				<li class="c-info-item">
+					<article>
+						<div class="c-info-tags">
+							<span class="category __blue">FANCLUB</span>
+							<span class="date">2021.00.00</span>
+						</div>
+						<section>
+							<h3 class="c-info-article-title">
+								<a href="./detail.html"> ニュースタイトルが入ります。ニュースタイトルが入ります。 ニュースタイトルが入ります。ニュースタイトルが入ります。 </a>
+							</h3>
+							<a href="./detail.html" class="c-info-more f-jfR">READ MORE</a>
+						</section>
+					</article>
+				</li>
+				<li class="c-info-item">
+					<article>
+						<div class="c-info-tags">
+							<span class="category __green">MEDIA</span>
+							<span class="date">2021.00.00</span>
+						</div>
+						<section>
+							<h3 class="c-info-article-title"><a href="./detail.html"> ニュースタイトルが入ります。ニュースタイトルが入ります。 ニュースタイトルが入ります。ニュースタイトルが入ります。 </a></h3>
+							<a href="./detail.html" class="c-info-more f-jfR">READ MORE</a>
+						</section>
+					</article>
+				</li>
+				<li class="c-info-item">
+					<article>
+						<div class="c-info-tags">
+							<span class="category __orange">RELEASE</span>
+							<span class="date">2021.00.00</span>
+						</div>
+						<section>
+							<h3 class="c-info-article-title"><a href="./detail.html"> ニュースタイトルが入ります。ニュースタイトルが入ります。 ニュースタイトルが入ります。ニュースタイトルが入ります。 </a></h3>
+							<a href="./detail.html" class="c-info-more f-jfR">READ MORE</a>
+						</section>
+					</article>
+				</li>
+				<li class="c-info-item">
+					<article>
+						<div class="c-info-tags">
+							<span class="category __pink">LIVE/EVENT</span>
+							<span class="date">2021.00.00</span>
+						</div>
+						<section>
+							<h3 class="c-info-article-title"><a href="./detail.html"> ニュースタイトルが入ります。ニュースタイトルが入ります。 ニュースタイトルが入ります。ニュースタイトルが入ります。 </a></h3>
+							<a href="./detail.html" class="c-info-more f-jfR">READ MORE</a>
+						</section>
+					</article>
+				</li>
+				<li class="c-info-item">
+					<article>
+						<div class="c-info-tags">
+							<span class="category __purple">OTHERS</span>
+							<span class="date">2021.00.00</span>
+						</div>
+						<section>
+							<h3 class="c-info-article-title"><a href="./detail.html"> ニュースタイトルが入ります。ニュースタイトルが入ります。 ニュースタイトルが入ります。ニュースタイトルが入ります。 </a></h3>
+							<a href="./detail.html" class="c-info-more f-jfR">READ MORE</a>
+						</section>
+					</article>
+				</li>
+			</ul>
+		</div>
+		<!-- 共通ページャー -->
+		<div class="l-pager">
+			<ul class="pager-items">
+				<li class="pager-item prev"><a href="#"><img src="../assets/img/ic-pager-prev.svg" width="23" height="auto" alt="前の一覧へ"></a></li>
+				<li class="pager-item number"><a href="#">1</a></li>
+				<li class="pager-item number is-current"><span>2</span></li>
+				<li class="pager-item number"><a href="#">3</a></li>
+				<li class="pager-item number"><a href="#">4</a></li>
+				<li class="pager-item number"><a href="#">5</a></li>
+				<li class="pager-item number dotted"><span>…</span></li>
+				<li class="pager-item number"><a href="#">10</a></li>
+				<li class="pager-item next"><a href="#"><img src="../assets/img/ic-pager-next.svg" width="23" height="auto" alt="次の一覧へ"></a></li>
+			</ul>
+		</div>
+		<!-- //共通ページャー -->
+	</div>
+</main>
+<footer class="l-footer para-item" data-reg="10">
+	<div class="c-btn__anchor anchor-btn">
+		<a href="#js-anchor">
+			<picture>
+				<source media="(min-width: 992px)" srcset="../assets/img/btn-anchor-pc.svg">
+				<source media="(min-width: 300px)" srcset="../assets/img/btn-anchor.svg">
+				<img src="../assets/img/btn-anchor.svg" alt="" width="50" height="auto">
+			</picture>
+		</a>
+	</div>
+	<p class="l-footer__copyright">&copy; AMUSE Inc. All Rights Reserved.</p>
+</footer>
+<script>
+	window.onload = function()
+	{
+		const loadingContent = document.getElementById('js-loading');
+		const Body = document.getElementsByTagName('body');
+		loadingContent.classList.add('is-loaded');
+		Body[0].classList.add('is-loaded');
+	}
+</script>
+<script src="../assets/js/script.js"></script>
+<script src="../assets/js/slider.js"></script>
+<script src="../assets/js/modal.js"></script>
+<script src="../assets/js/drawer.js"></script>

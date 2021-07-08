@@ -1,0 +1,142 @@
+<% const page='podcast'; %>
+<%- include('../components/_header',{ meta: data.pageMeta[page]}); %>
+
+<main class="l-main l-page-main c-page-bg">
+	<div class="l-page-outer">
+		<h1 class="l-page-title">PODCAST</h1>
+		<div class="l-page-inner l-detail-inner">
+
+			<article class="detail-article">
+				<section class="detail-heading">
+					<h2 class="detail-title">
+						タイトルが入ります。ここはPODCAST詳細ページです。タイトルが入ります。ここはPODCAST詳細ページです。タイトルが入ります。
+					</h2>
+					<p class="detail-date">2021. 00. 00</p>
+				</section>
+				<!-- 投稿内容 -->
+				<div class="detail-content">
+					<p>ダミーです。文章がここに入ります。<br>
+						ダミーです。文章がここに入ります。入ります。ダミーです。文章がここに入ります。<br>
+						ダミーです。文章がここに入ります。入ります。<br>
+						ダミーです。文章がここに入ります。<br>
+						ダミーです。文章がここに入ります。入ります。</p>
+					<div><img src="../assets/img/img-movie-dummy.jpg" alt=""></div>
+					<p>ダミーです。文章がここに入ります。<br>
+						ダミーです。文章がここに入ります。入ります。ダミーです。文章がここに入ります。<br>
+						ダミーです。文章がここに入ります。入ります。<br>
+						ダミーです。文章がここに入ります。<br>
+						ダミーです。文章がここに入ります。入ります。</p>
+					<div class="is-sp"><img src="../assets/img/img-miyu03.jpg" alt=""></div>
+					<div class="is-sp"><img src="../assets/img/img-miyu04.jpg" alt=""></div>
+					<div class="is-pc dummy-img"><img src="../assets/img/img-miyu03.jpg" alt=""><img
+							src="../assets/img/img-miyu04.jpg" alt="">
+					</div>
+					<p>ダミーです。文章がここに入ります。<br>
+						ダミーです。文章がここに入ります。入ります。ダミーです。文章がここに入ります。<br>
+						ダミーです。文章がここに入ります。入ります。<br>
+						ダミーです。文章がここに入ります。<br>
+						ダミーです。文章がここに入ります。入ります。</p>
+				</div>
+				<!-- // 投稿内容 -->
+				<div class="detail-btn-container">
+					<!-- ボタンを押したときのスタイルをis-activeで定義 -->
+					<div class="detail-btn__like">
+						<div class="c-btn__like is-active">
+							<span>251</span>
+						</div>
+					</div>
+					<div class="detail-btn__comment">
+						<a href="../comment/index.html" class="c-btn__comment-action"><span>コメントする</span></a></div>
+					<div class="detail-btn__comment-number">
+						<span class="c-btn__comment __black" href="./detail.html"><span>250</span></span>
+					</div>
+				</div>
+			</article>
+
+			<div class="detail-comment-area">
+				<ul class="comment-items">
+					<!-- 各コメント -->
+					<li class="comment-item">
+						<div class="comment-item__heading">
+							<p class="author">ニックネームが入ります。</p>
+							<p class="date">2021 . 00 . 00</p>
+						</div>
+						<p class="sentence">
+							ダミーです。文章がここに入ります。<br>
+							ダミーです。文章がここに入ります。入ります。ダミーです。文章がここに入ります。
+						</p>
+						<!-- ボタンを押したときのスタイルをis-activeで定義 -->
+						<div class="comment-item__like">
+							<div class="c-btn__like">
+								<span>251</span>
+							</div>
+						</div>
+					</li>
+					<!-- // 各コメント -->
+
+					<!-- 各コメント -->
+					<li class="comment-item">
+						<div class="comment-item__heading">
+							<p class="author">ニックネームが入ります。</p>
+							<p class="date">2021 . 00 . 00</p>
+						</div>
+						<p class="sentence">
+							ダミーです。文章がここに入ります。<br>
+							ダミーです。文章がここに入ります。入ります。ダミーです。文章がここに入ります。
+						</p>
+						<div class="comment-item__like">
+							<!-- ボタンを押したときのスタイルをis-activeで定義 -->
+							<div class="c-btn__like is-active">
+								<span>251</span>
+							</div>
+						</div>
+					</li>
+					<!-- // 各コメント -->
+
+					<!-- 各コメント -->
+					<li class="comment-item">
+						<div class="comment-item__heading">
+							<p class="author">ニックネームが入ります。</p>
+							<p class="date">2021 . 00 . 00</p>
+						</div>
+						<p class="sentence">
+							ダミーです。文章がここに入ります。<br>
+							ダミーです。文章がここに入ります。入ります。ダミーです。文章がここに入ります。
+						</p>
+						<div class="comment-item__like">
+							<!-- ボタンを押したときのスタイルをis-activeで定義 -->
+							<div class="c-btn__like">
+								<span>3001</span>
+							</div>
+						</div>
+					</li>
+					<!-- // 各コメント -->
+				</ul>
+			</div>
+
+		</div>
+		<!-- 共通ページャー -->
+		<div class="l-pager detail-pager">
+			<ul class="pager-items">
+				<li class="pager-item prev"><a href="#"><img src="../assets/img/ic-pager-prev.svg" width="23" height="auto"
+							alt="前の一覧へ"></a></li>
+				<li class="pager-item number"><a href="#">1</a></li>
+				<li class="pager-item number is-current"><span>2</span></li>
+				<li class="pager-item number"><a href="#">3</a></li>
+				<li class="pager-item number"><a href="#">4</a></li>
+				<li class="pager-item number"><a href="#">5</a></li>
+				<li class="pager-item number dotted"><span>…</span></li>
+				<li class="pager-item number"><a href="#">10</a></li>
+				<li class="pager-item next"><a href="#"><img src="../assets/img/ic-pager-next.svg" width="23" height="auto"
+							alt="次の一覧へ"></a></li>
+			</ul>
+		</div>
+		<!-- //共通ページャー -->
+
+		<div class="c-btn__container">
+			<a href="./index.html" class="c-btn__confirm btn-confirm-arrow">PODCAST TOP</a>
+		</div>
+
+	</div>
+</main>
+<%- include('../components/_footer',{ meta: data.pageMeta[page]}); %>

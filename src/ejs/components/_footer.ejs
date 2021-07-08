@@ -1,0 +1,26 @@
+<footer class="l-footer para-item" data-reg="10">
+	<div class="c-btn__anchor anchor-btn">
+		<a href="#js-anchor">
+			<picture>
+				<source media="(min-width: 992px)" srcset="<%= meta.imgPath %>btn-anchor-pc.svg">
+				<source media="(min-width: 300px)" srcset="<%= meta.imgPath %>btn-anchor.svg">
+				<img src="<%= meta.imgPath %>btn-anchor.svg" alt="" width="50" height="auto">
+			</picture>
+		</a>
+	</div>
+	<p class="l-footer__copyright">&copy; AMUSE Inc. All Rights Reserved.</p>
+</footer>
+<script>
+	window.onload = function() {
+  const loadingContent = document.getElementById('js-loading');
+	const Body = document.getElementsByTagName('body');
+  loadingContent.classList.add('is-loaded');
+  Body[0].classList.add('is-loaded');
+}
+</script>
+<script src="<%= meta.scriptPath %>script.js"></script>
+<script src="<%= meta.scriptPath %>slider.js"></script>
+<script src="<%= meta.scriptPath %>modal.js"></script>
+<script src="<%= meta.scriptPath %>drawer.js"></script>
+</body>
+</html>

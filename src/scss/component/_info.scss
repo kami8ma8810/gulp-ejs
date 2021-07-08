@@ -1,0 +1,156 @@
+@use '../global'as *;
+
+.c-info-item {
+	position: relative;
+	border-top: vw(2) solid $borderGray;
+	padding: vw(35) 0 vw(25);
+
+	@include mq(lg) {
+		border-width: 1px;
+		padding: 20px 0 18px;
+	}
+
+	&:last-of-type {
+		border-bottom: vw(2) solid $borderGray;
+
+		@include mq(lg) {
+			border-width: 1px;
+		}
+	}
+}
+
+.c-info-tags {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	margin-bottom: vw(20);
+
+	@include mq(lg) {
+		margin-bottom: 16px;
+	}
+
+	span {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.category {
+		// font-family: $josefinMI;
+		@include josefinMI;
+		font-size: vw(24);
+		min-width: vw(180);
+		text-align: center;
+		position: relative;
+		margin-right: vw(20);
+		letter-spacing: .1em;
+		z-index: 1;
+
+		@include mq(lg) {
+			font-size: 20px;
+			min-width: 0;
+			width: 140px;
+			margin-right: 20px;
+			letter-spacing: .05em;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: vw(10);
+			z-index: -1;
+
+			@include mq(lg) {
+				height: 7.7px
+			}
+		}
+
+		&.__blue {
+			&::before {
+				background-color: $blue;
+			}
+		}
+
+		&.__green {
+			&::before {
+				background-color: $green;
+			}
+		}
+
+		&.__orange {
+			&::before {
+				background-color: $orange;
+			}
+		}
+
+		&.__pink {
+			&::before {
+				background-color: $pink;
+			}
+		}
+
+		&.__purple {
+			&::before {
+				background-color: $purple;
+			}
+		}
+	}
+
+	.new {
+		width: vw(72.5);
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: vw(15);
+
+		@include mq(lg) {
+			width: 49.8px;
+			margin-right: 10px;
+		}
+	}
+
+	.date {
+		// font-family: $josefinR;
+		@include josefinR;
+		font-size: vw(22);
+		letter-spacing: .05em;
+
+		@include mq(lg) {
+			font-size: 15px;
+			margin-top: .3em;
+		}
+	}
+}
+
+.c-info-article-title {
+	@include clamp;
+	line-height: 1.54;
+	font-size: vw(24);
+	margin-bottom: vw(45);
+
+	@include mq(lg) {
+		font-size: 16px;
+		margin-bottom: 0;
+		line-height: 1.5;
+		// width: 50%;
+		width: 80%;
+	}
+}
+
+.c-info-more {
+	position: absolute;
+	right: 0;
+	bottom: vw(18);
+	font-size: vw(22);
+	letter-spacing: .08em;
+	// font-family: $josefinR;
+	@include josefinR;
+
+
+	@include mq(lg) {
+		font-size: 14px;
+		bottom: 22px;
+	}
+}

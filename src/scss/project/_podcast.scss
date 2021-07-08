@@ -1,0 +1,69 @@
+@use '../global'as *;
+
+.page-podcast-inner {
+	margin-top: vw(330);
+
+	@include mq(lg) {
+		margin-top: 230px;
+	}
+}
+
+.c-article-item.podcast-article {
+	margin-bottom: vw(195);
+
+	@include mq(lg) {
+		margin-bottom: 100px;
+	}
+
+	.podcast-img {
+		border: vw(6.3) solid $black;
+		height: vw(450);
+		border-radius: vw(42.5);
+		background-size: cover;
+
+		@include mq(lg) {
+			height: 205px;
+			border-width: 2.9px;
+			border-radius: 19.7px;
+		}
+	}
+
+	.article-thumbnail {
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: vw(-160);
+			left: vw(27);
+			width: vw(89);
+			height: vw(164);
+			z-index: 0;
+			background-image: url(#{$imgDir}obj-podcast.svg);
+			background-position: center;
+			background-size: contain;
+
+			@include mq(lg) {
+				width: 41px;
+				height: 76px;
+				top: -73.5px;
+				left: 13px;
+			}
+		}
+	}
+
+	.podcast-img-obj {
+		position: absolute;
+		top: vw(-160);
+		left: vw(27);
+		width: vw(89);
+		height: auto;
+		z-index: -1;
+
+		@include mq(lg) {
+			width: 42px;
+			top: -74.5px;
+			left: 13px;
+		}
+	}
+}

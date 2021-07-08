@@ -1,0 +1,120 @@
+@use '../global'as *;
+
+
+.card-select-items {
+	@keyframes radio-select {
+		0% {
+			transform: scale(0, 0);
+		}
+
+		65% {
+			transform: scale(1.1, 1.1);
+		}
+
+		100% {
+			transform: scale(1, 1);
+		}
+	}
+
+	.card-select-item {
+		label {
+			display: block;
+			position: relative;
+			padding-left: vw(35);
+			cursor: pointer;
+			letter-spacing: .05em;
+
+			@include mq(md) {
+				padding-left: 30px;
+			}
+		}
+
+		input {
+			height: 1px;
+			width: 1px;
+			opacity: 0;
+		}
+
+		.outside {
+			display: inline-block;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			margin-top: vw(-25);
+			width: vw(40);
+			height: vw(40);
+			border: 1px solid $formGray;
+			border-radius: 50%;
+			box-sizing: border-box;
+			background: $white;
+
+			@include mq(md) {
+				margin-top: -18px;
+				width: 28px;
+				height: 28px;
+
+			}
+		}
+
+		.inside {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			display: inline-block;
+			border-radius: 50%;
+			width: vw(28);
+			// height: ($size - 10px);
+			height: vw(28);
+			background: $blue;
+			left: vw(4);
+			top: vw(4);
+			transform: scale(0, 0);
+
+			@include mq(md) {
+				width: 20px;
+				height: 20px;
+				background: $blue;
+				left: 3px;
+				top: 3px;
+			}
+
+			.no-transforms & {
+				left: auto;
+				top: auto;
+				width: 0;
+				height: 0;
+			}
+		}
+
+		input {
+			&:checked {
+				+.outside .inside {
+					animation: radio-select 0.1s linear;
+					transform: scale(1, 1);
+
+					.no-transforms & {
+						width: vw(28);
+						height: vw(28);
+
+						// width: ($size - 10px);
+						// height: ($size - 10px);
+						@include mq(md) {
+							width: 20px;
+							height: 20px;
+						}
+					}
+				}
+			}
+
+			//for better accessibility
+			// &:focus,
+			// &:active {
+			// 	+.outside {
+			// 		border-color: $blue;
+			// 	}
+			// }
+		}
+	}
+
+}

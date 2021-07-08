@@ -1,0 +1,41 @@
+@use '../global'as *;
+
+
+.c-date-talk {
+	background-image: url(#{$imgDir}ic-pen-blue.svg);
+	background-position: left bottom;
+	background-size: contain;
+	display: inline-flex;
+	height: vw(88);
+	width: auto;
+	align-items: flex-end;
+	justify-content: flex-start;
+
+	@include mq(lg) {
+		height: 68px;
+	}
+}
+
+.c-date-smlg {
+	@include josefinR;
+	// font-family: $josefinR;
+	letter-spacing: .02em;
+
+	.sm {
+		font-size: vw(22);
+
+		@include mq(lg) {
+			font-size: 16px;
+		}
+	}
+
+	.lg {
+		font-size: vw(28);
+		padding-left: vw(7);
+
+		@include mq(lg) {
+			font-size: 20px;
+			padding-left: 5px;
+		}
+	}
+}

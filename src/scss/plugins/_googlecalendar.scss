@@ -1,0 +1,51 @@
+@use '../global'as *;
+
+.calendar-container {
+
+	// .fc .fc-button-group {
+	// 	button.fc-dayGridMonth-button {
+	// 		display: none;
+	// 	}
+	// }
+	// .fc-scroller {
+	// 	overflow-y: hidden !important;
+	// }
+
+	h2.fc-toolbar-title {
+		@include josefinM;
+		// font-family: $josefinM;
+		max-width: 50vw;
+		font-size: vw(52);
+
+		@include mq(md) {
+			font-size: 38px;
+		}
+	}
+
+	// // 曜日
+	.fc-col-header-cell-cushion {
+		font-size: vw(28);
+		vertical-align: middle;
+
+		@include mq(md) {
+			font-size: 20px;
+		}
+	}
+
+	// // セル内
+	.fc-daygrid-day-number,
+	.fc-daygrid-event {
+		font-size: vw(24);
+
+		@include mq(md) {
+			font-size: 18px;
+		}
+	}
+
+	.fc-event-title {
+
+		@include mq(md) {
+			font-size: 14px;
+		}
+	}
+}

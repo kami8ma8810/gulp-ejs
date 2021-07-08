@@ -1,0 +1,329 @@
+@use '../global'as *;
+
+.c-btn__anchor {
+	width: 100%;
+	height: auto;
+	text-align: center;
+
+	a {
+		display: inline-block;
+
+		img {
+			width: vw(80);
+
+			@include mq(md) {
+				width: 47.5px;
+			}
+		}
+	}
+}
+
+.c-btn__login {
+	cursor: pointer;
+	text-align: center;
+	background-color: $black;
+	// font-family: $josefinR;
+	@include josefinR;
+	color: $white;
+	letter-spacing: .1em;
+}
+
+.c-btn__viewall {
+	display: inline-block;
+	position: relative;
+	padding-right: vw(130);
+	padding-top: vw(22);
+	padding-bottom: vw(22);
+	letter-spacing: .07em;
+	@include josefinSB;
+
+	@include mq(lg) {
+		padding-right: 85px;
+		padding-top: 25px;
+		padding-bottom: 25px;
+		letter-spacing: .1em;
+	}
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		right: 0;
+		top: 0;
+	}
+
+	// arrow
+	&::before {
+		background-image: url(#{$imgDir}btn-all-arrow.svg);
+		background-position: right 12% top 43%;
+		// background-size: vw(94.5);
+		background-size: vw(93.5);
+		transition: transform .3s $easeOutCirc;
+
+		@include mq(lg) {
+			background-position: right 16px top 43%;
+			background-size: 63px;
+		}
+	}
+
+	// circle
+	&::after {
+		background-image: url(#{$imgDir}btn-all-circle.svg);
+		background-position: right 0% top 43%;
+		// background-size: vw(60);
+		background-size: vw(59);
+		transition: transform .1s $easeOutCirc;
+		transform-origin: 70% center;
+
+		@include mq(lg) {
+			background-size: 40px;
+		}
+	}
+
+	&:hover {
+		&::before {
+			transform: translateX(8px);
+		}
+
+		&::after {
+			transition: transform .2s $easeOutCirc .3s;
+			transform: scale(1.2);
+		}
+	}
+}
+
+
+.c-btn__border {
+	display: block;
+	border: vw(1.3) solid $black;
+	background-color: $white;
+
+	@include mq(md) {
+		border: 1px solid $black;
+	}
+
+	&:active {
+		border: vw(1.3) solid $black;
+
+		@include mq(md) {
+			border: 1px solid $black;
+		}
+
+	}
+}
+
+// 白黒矢印ボタン
+.c-btn__confirm {
+	background-color: $black;
+	color: $white;
+	text-align: center;
+	position: relative;
+	letter-spacing: .1em;
+	// font-family: $josefinR;
+	@include josefinR;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		right: -12.5%;
+		transform: translateY(-50%);
+		background-image: url(#{$imgDir}btn-arrow-set.svg);
+		width: vw(93);
+		height: 100%;
+		background-size: contain;
+		background-position: right center;
+
+		@include mq(md) {
+			width: 75px;
+			right: -14%;
+		}
+	}
+
+}
+
+.c-btn__like {
+	display: inline-block;
+	width: auto;
+	height: vw(48);
+	padding-left: vw(28);
+	padding-right: vw(28);
+	line-height: vw(48);
+	border-radius: vw(24);
+	background-color: $white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	cursor: pointer;
+	border: 1px solid $red;
+	// // :activeの青色解除
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+	@include mq(lg) {
+		height: 26px;
+		line-height: 26px;
+		border-radius: 13px;
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+
+	span {
+		font-size: vw(26);
+		// font-family: $josefinR;
+		@include josefinR;
+		color: $red;
+		padding-left: .9em;
+		display: inline-block;
+		margin-top: .1em;
+		letter-spacing: .05em;
+
+		@include mq(lg) {
+			font-size: 13.8px;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: .8em;
+			top: 0;
+			width: 1em;
+			height: 100%;
+			background-image: url(#{$imgDir}ic-heart-red.svg);
+			background-size: contain;
+			background-position: left center;
+		}
+	}
+
+	&:active,
+	&.is-active {
+		background-color: $red;
+
+		span {
+			color: $white;
+
+			&::before {
+				background-image: url(#{$imgDir}ic-heart-white.svg);
+			}
+		}
+	}
+}
+
+.c-btn__comment {
+	@extend .c-btn__like;
+	border-color: $blue;
+
+	a {
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+	}
+
+	span {
+		color: $blue;
+		padding-left: .7em;
+
+		&::before {
+			left: .6em;
+			top: 0;
+			width: 1.1em;
+			background-image: url(#{$imgDir}ic-comment-blue.svg);
+		}
+	}
+
+	&:active,
+	&.is-active {
+		background-color: $white;
+
+		span {
+			color: $blue;
+
+			&::before {
+				background-image: url(#{$imgDir}ic-comment-blue.svg);
+			}
+		}
+	}
+
+	&.__black {
+		border: none;
+		display: inline-flex;
+		align-items: center;
+		padding-left: 0;
+
+		span {
+			color: $black;
+			padding-left: 1.5em;
+
+			@include mq(lg) {
+				font-size: 20px;
+			}
+
+			&::before {
+				left: 0;
+				top: 0;
+				width: 1.3em;
+				background-image: url(#{$imgDir}ic-comment-black.svg);
+			}
+		}
+	}
+}
+
+.c-btn__comment-action {
+	background-color: $blue;
+	height: vw(80);
+	// line-height: vw(80);
+	line-height: vw(75);
+	border-radius: vw(40);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	display: inline-block;
+	// :activeの青色解除
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	padding-left: vw(85);
+	padding-right: vw(80);
+
+	@include mq(lg) {
+		height: 60px;
+		// line-height: 60px;
+		line-height: 55px;
+		border-radius: 30px;
+		padding-left: 70px;
+		padding-right: 70px;
+	}
+
+	span {
+		display: inline-block;
+		font-weight: bold;
+		color: $white;
+		font-size: vw(26);
+		vertical-align: middle;
+		padding-left: 2em;
+
+		@include mq(lg) {
+			font-size: 18px;
+			padding-left: 2.1em;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 2.7em;
+			top: 0;
+			width: 2.2em;
+			height: 100%;
+			background-image: url(#{$imgDir}ic-comment.svg);
+			background-size: contain;
+			background-position: left center;
+
+			@include mq(lg) {
+				left: 2.9em;
+				width: 2.5em;
+			}
+		}
+	}
+
+}

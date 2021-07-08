@@ -1,0 +1,30 @@
+<% const page='top'; %> <%- include('./components/_header',{ meta:
+data.pageMeta[page]}); %>
+<section class="top-kv">
+  <h1 class="top-kv-title">
+    <img src="./assets/img/text-logo-kv.svg" alt="" /><span class="sr-only"
+      >MIYU TOMIYA OFFICIAL SITE</span
+    >
+  </h1>
+  <div class="top-kv-slider">
+    <div class="slide-item" style="z-index: 0">
+      <div class="slide-visual is-active">
+        <span class="slide-bg __1"></span>
+      </div>
+    </div>
+
+    <div class="slide-item" style="z-index: 0">
+      <div class="slide-visual is-active">
+        <span class="slide-bg __2"></span>
+      </div>
+    </div>
+
+    <div class="slide-item" style="z-index: 1">
+      <div class="slide-visual is-active">
+        <span class="slide-bg __3"></span>
+      </div>
+    </div>
+  </div>
+</section>
+<%- include('./components/_main.ejs',{meta:data.pageMeta[page]}); %> <%-
+include('./components/_footer',{ meta: data.pageMeta[page]}); %>

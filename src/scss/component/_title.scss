@@ -1,0 +1,12 @@
+@use '../global'as *;
+
+.c-top-section-title {
+	text-align: center;
+	@include josefinSB;
+	font-size: vw(60);
+	letter-spacing: .05em;
+
+	@include mq(lg) {
+		font-size: 58px;
+	}
+}

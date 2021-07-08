@@ -1,0 +1,19 @@
+@use '../global'as *;
+
+.c-box-new {
+	position: relative;
+
+	&__tag {
+		position: absolute;
+		display: inline-block;
+		top: vw(-20);
+		right: vw(-20);
+		width: vw(120);
+
+		@include mq(lg) {
+			width: 120px;
+			top: -20px;
+			right: -20px;
+		}
+	}
+}

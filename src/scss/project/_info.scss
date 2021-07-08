@@ -1,0 +1,208 @@
+@use '../global'as *;
+
+.page-info-inner {
+	margin-top: vw(205);
+	margin-bottom: vw(100);
+
+	@include mq(lg) {
+		margin-top: 200px;
+		margin-bottom: 96px;
+	}
+}
+
+.tab-menu-items {
+	width: 100%;
+	margin-bottom: vw(100);
+	@include josefinMI;
+	// font-family: $josefinMI;
+
+	@include mq(lg) {
+		margin-bottom: 80px;
+		display: flex;
+		width: 66rem;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&>div {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: vw(10);
+
+		@include mq(lg) {
+			margin-bottom: 0;
+		}
+
+		&:last-of-type {
+			@include mq(lg) {
+				margin-left: 8px;
+			}
+		}
+	}
+}
+
+.tab-menu-item {
+	width: 32.24%;
+	text-align: center;
+	cursor: pointer;
+	// :activeの青色解除
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	font-size: vw(24);
+	height: vw(60);
+	line-height: vw(60);
+	letter-spacing: .07em;
+
+
+	&+.tab-menu-item {
+		@include mq(lg) {
+			margin-left: 8px;
+		}
+	}
+
+	&.__1 {
+		border: vw(2) solid $allGray;
+		color: $allGray;
+
+		&.is-active {
+			background-color: $allGray;
+		}
+	}
+
+	&.__2 {
+		border: vw(2) solid $green;
+		color: $green;
+
+		&.is-active {
+			background-color: $green;
+		}
+	}
+
+	&.__3 {
+		border: vw(2) solid $orange;
+		color: $orange;
+
+		&.is-active {
+			background-color: $orange;
+		}
+	}
+
+	&.__4 {
+		border: vw(2) solid $pink;
+		color: $pink;
+
+		&.is-active {
+			background-color: $pink;
+		}
+	}
+
+	&.__5 {
+		border: vw(2) solid $purple;
+		color: $purple;
+
+		&.is-active {
+			background-color: $purple;
+		}
+	}
+
+	&.__6 {
+		border: vw(2) solid $blue;
+		color: $blue;
+
+		&.is-active {
+			background-color: $blue;
+		}
+	}
+
+	&.is-active {
+		color: $white;
+	}
+
+
+}
+
+.tab-menu-items li.tab-menu-item {
+	@include mq(lg) {
+		font-size: 15px;
+		width: 130px;
+		height: 38px;
+		line-height: 38px;
+		border-width: 1.5px;
+	}
+}
+
+// 詳細ページ ページャー
+.page-info-pager {
+	text-align: center;
+
+	&.detail-pager {
+		margin-bottom: vw(100);
+
+		@include mq(lg) {
+			margin-bottom: 80px;
+		}
+	}
+
+	.info-pager-inner {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		span {
+			@include josefinR;
+			// font-family: $josefinR;
+			font-size: vw(26);
+			letter-spacing: .08em;
+			display: inline-block;
+
+			@include mq(lg) {
+				font-size: 18px;
+			}
+
+			&.prev {
+				margin-right: vw(45);
+
+				@include mq(lg) {
+					margin-right: 30px;
+				}
+			}
+
+			&.next {
+				margin-left: vw(45);
+
+				@include mq(lg) {
+					margin-left: 30px;
+				}
+			}
+
+			&.text {
+				height: vw(60);
+				line-height: vw(60);
+
+				@include mq(lg) {
+					height: 40px;
+					line-height: 40px;
+				}
+
+				&:nth-of-type(2) {
+					padding-right: vw(65);
+					margin-right: vw(65);
+					border-right: vw(1.5) solid $black;
+
+					@include mq(lg) {
+						padding-right: 55px;
+						margin-right: 55px;
+						border-width: 1.5px;
+					}
+				}
+			}
+
+			img {
+				width: vw(20);
+
+				@include mq(lg) {
+					width: 10px;
+				}
+			}
+		}
+	}
+}

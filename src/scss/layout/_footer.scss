@@ -1,0 +1,27 @@
+@use '../global'as *;
+
+.l-footer {
+	text-align: center;
+
+	.anchor-btn {
+		margin-bottom: vw(170);
+
+		@include mq(md) {
+			margin-bottom: 195px;
+		}
+	}
+
+	&__copyright {
+		@include josefinR;
+		// font-family: $josefinR;
+		font-size: vw(20);
+		margin-bottom: vw(50);
+		letter-spacing: .095em;
+		color: $black;
+
+		@include mq(md) {
+			font-size: 14px;
+			margin-bottom: 50px;
+		}
+	}
+}

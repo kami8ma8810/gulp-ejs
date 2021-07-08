@@ -1,0 +1,104 @@
+{
+	"data": {
+		"pageMeta": {
+			"top": {
+				"stylePath": "./assets/css/",
+				"scriptPath": "./assets/js/",
+				"imgPath": "./assets/img/",
+				"linkPath": "./",
+				"addClass": ""
+			},
+			"error": {
+				"stylePath": "./assets/css/",
+				"scriptPath": "./assets/js/",
+				"imgPath": "./assets/img/",
+				"linkPath": "./",
+				"addClass": "is-sub is-error"
+			},
+			"sub": {
+				"stylePath": "../assets/css/",
+				"scriptPath": "../assets/js/",
+				"imgPath": "../assets/img/",
+				"linkPath": "../",
+				"addClass": "is-sub"
+			},
+			"mypage": {
+				"stylePath": "../assets/css/",
+				"scriptPath": "../assets/js/",
+				"imgPath": "../assets/img/",
+				"linkPath": "../",
+				"addClass": "is-sub is-mypage"
+			},
+			"comment": {
+				"stylePath": "../assets/css/",
+				"scriptPath": "../assets/js/",
+				"imgPath": "../assets/img/",
+				"linkPath": "../",
+				"addClass": "is-sub is-comment"
+			},
+			"info": {
+				"stylePath": "../assets/css/",
+				"scriptPath": "../assets/js/",
+				"imgPath": "../assets/img/",
+				"linkPath": "../",
+				"addClass": "is-sub is-info"
+			},
+			"memories": {
+				"stylePath": "../assets/css/",
+				"scriptPath": "../assets/js/",
+				"imgPath": "../assets/img/",
+				"linkPath": "../",
+				"addClass": "is-sub is-memories"
+			},
+			"movie": {
+				"stylePath": "../assets/css/",
+				"scriptPath": "../assets/js/",
+				"imgPath": "../assets/img/",
+				"linkPath": "../",
+				"addClass": "is-sub is-movie"
+			},
+			"podcast": {
+				"stylePath": "../assets/css/",
+				"scriptPath": "../assets/js/",
+				"imgPath": "../assets/img/",
+				"linkPath": "../",
+				"addClass": "is-sub is-podcast"
+			},
+			"profile": {
+				"stylePath": "../assets/css/",
+				"scriptPath": "../assets/js/",
+				"imgPath": "../assets/img/",
+				"linkPath": "../",
+				"addClass": "is-sub is-profile"
+			},
+			"report": {
+				"stylePath": "../assets/css/",
+				"scriptPath": "../assets/js/",
+				"imgPath": "../assets/img/",
+				"linkPath": "../",
+				"addClass": "is-sub is-report"
+			},
+			"schedule": {
+				"stylePath": "../assets/css/",
+				"scriptPath": "../assets/js/",
+				"imgPath": "../assets/img/",
+				"linkPath": "../",
+				"addClass": "is-sub is-schedule"
+			},
+			"special": {
+				"stylePath": "../assets/css/",
+				"scriptPath": "../assets/js/",
+				"imgPath": "../assets/img/",
+				"linkPath": "../",
+				"addClass": "is-sub is-special"
+			},
+			"talkbox": {
+				"stylePath": "../assets/css/",
+				"scriptPath": "../assets/js/",
+				"imgPath": "../assets/img/",
+				"linkPath": "../",
+				"addClass": "is-sub is-talkbox"
+			}
+		}
+	}
+}
