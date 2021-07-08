@@ -20,6 +20,10 @@ const gcmq = require('gulp-group-css-media-queries');
 // JavaScript
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
+// webpack
+const webpack = require('webpack');
+const webpackConfig = require('./webpack.config');
+const webpackStream = require('webpack-stream'); // gulpでwebpackを使うために必要なプラグイン
 
 // 画像圧縮
 const imageMin = require('gulp-imagemin');
@@ -155,6 +159,13 @@ const jsBabel = () => {
   );
 };
 
+// webpack
+const bundleJs = (done) => {
+  //webpackStreamの第2引数にwebpackを渡す
+  webpackStream(webpackConfig, webpack).pipe(dest(paths.scripts.dist));
+  done();
+};
+
 // 画像圧縮
 const imagesFunc = () => {
   return src(paths.images.src, {
@@ -241,11 +252,13 @@ const watchFiles = () => {
   watch(paths.html.watch, series(htmlFunc, browserReloadFunc));
   watch(paths.styles.src, series(sassCompile));
   watch(paths.scripts.src, series(jsBabel, browserReloadFunc));
+  // watch(paths.scripts.src, series(bundleJs, browserReloadFunc));
   watch(paths.images.src, series(imagesFunc, browserReloadFunc));
 };
 
 // npx gulp実行処理
 exports.default = series(
+  // parallel(htmlFunc, sassCompile, bundleJs, imagesFunc),
   parallel(htmlFunc, sassCompile, jsBabel, imagesFunc),
   // parallel(htmlFunc, sassCompile, jsBabel),
   parallel(watchFiles, browserSyncFunc)
